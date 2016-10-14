@@ -1,18 +1,17 @@
 # Sketch Guides
-Easy to set exact coordinates "Guides" around element.
+Add Guides to edges and midpoints at once.
 
 **Sketch 40.^ support**
 
 ## Installing Plugins
 1. [Download](https://github.com/luvmex/Sketch-Guides/archive/master.zip) and unzip
-2. Double Click `Sketch Guides.sketchplugin` in folder.
-3. Have fun with Sketch Guides.
+2. Double Click `Sketch Guides.sketchplugin`.
+3. Have fun.
 
 ![Demo](https://celynxie.firebaseapp.com/lib/image/photo/guideup.png)
 
 ## UI Support
-Make easy way to use, More intutitive user experience.
-Just forget the Hot-Keys and Use it!
+Support intuition interface don't need to use hot-key, that you can just click to use!
 
 ![Tool UI](https://celynxie.firebaseapp.com/lib/image/photo/ControlBar_Rect.png)
 
