@@ -10,7 +10,7 @@
         {
             "name": "ControlBar",
             "identifier": "controlBar",
-            "shortcut": "",
+            "shortcut": "ctrl shift v",
             "handler" : "controlBar",
             "script": "guides.sketchscript"
         },
