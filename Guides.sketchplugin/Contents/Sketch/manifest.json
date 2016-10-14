@@ -10,56 +10,56 @@
         {
             "name": "ControlBar",
             "identifier": "controlBar",
-            "shortcut": "ctrl shift v",
+            "shortcut": "",
             "handler" : "controlBar",
             "script": "guides.sketchscript"
         },
         {
             "name": "1. Top Guide",
             "identifier": "topGuide",
-            "shortcut": "ctrl shift 2",
+            "shortcut": "",
             "handler" : "topGuide",
             "script": "guides.sketchscript"
         },
         {
             "name": "2. Right Guide",
             "identifier": "rightGuide",
-            "shortcut": "ctrl shift 3",
+            "shortcut": "",
             "handler" : "rightGuide",
             "script": "guides.sketchscript"
         },
         {
             "name": "3. Bottom Guide",
             "identifier": "bottomGuide",
-            "shortcut": "ctrl shift 4",
+            "shortcut": "",
             "handler" : "bottomGuide",
             "script": "guides.sketchscript"
         },
         {
             "name": "4. left Guide",
             "identifier": "leftGuide",
-            "shortcut": "ctrl shift 5",
+            "shortcut": "",
             "handler" : "leftGuide",
             "script": "guides.sketchscript"
         },
         {
             "name": "5. vCenter Guide",
             "identifier": "vCenterGuide",
-            "shortcut": "ctrl shift 6",
+            "shortcut": "",
             "handler" : "vCenterGuide",
             "script": "guides.sketchscript"
         },
         {
             "name": "6. hCenter Guide",
             "identifier": "hCenterGuide",
-            "shortcut": "ctrl shift 7",
+            "shortcut": "",
             "handler" : "hCenterGuide",
             "script": "guides.sketchscript"
         },
         {
             "name": "7. Remove All Guides",
             "identifier": "removeAllGuides",
-            "shortcut": "ctrl shift 7",
+            "shortcut": "",
             "handler" : "removeAllGuides",
             "script": "guides.sketchscript"
         }
