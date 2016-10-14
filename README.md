@@ -4,9 +4,11 @@ Easy to set exact coodinates "Guides" arround element.
 **Sketch 40.^ support**
 
 ## Installing Plugins
-1. Download and unzip
-2. Double click `Sketch Guides.sketchplugin`.
+1. [Download](https://github.com/luvmex/Sketch-Guides/archive/master.zip) and unzip
+2. Double Click `Sketch Guides.sketchplugin` in folder.
 3. Have fun with Sketch Guides.
+
+![Demo](https://celynxie.firebaseapp.com/lib/image/photo/guideup.png)
 
 ## UI Suuport
 Make easy way to use, More intutitive user experience.
