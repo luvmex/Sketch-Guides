@@ -16,7 +16,7 @@ also can remove all guides.
 
 ## Usage
 Just press to lauch Interface Control Tool :
-**Control + Command + V**
+**Shift + Ctrl + V**
 
 
 ## Interface Control tool
