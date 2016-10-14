@@ -1,5 +1,5 @@
 # Sketch Guides
-Easy to set exact coodinates "Guides" arround element.
+Easy to set exact coordinates "Guides" around element.
 
 **Sketch 40.^ support**
 
@@ -10,7 +10,7 @@ Easy to set exact coodinates "Guides" arround element.
 
 ![Demo](https://celynxie.firebaseapp.com/lib/image/photo/guideup.png)
 
-## UI Suuport
+## UI Support
 Make easy way to use, More intutitive user experience.
 Just forget the Hot-Keys and Use it!
 
