@@ -1,3 +1,5 @@
+![Demo](https://celynxie.firebaseapp.com/lib/image/photo/GuideAvatar.png)
+
 # Sketch Guides
 ###Add Guides to edges and midpoints at once.
 
@@ -9,7 +11,6 @@ In the past few years I have designed UI with Photoshop plugin named Velositey 1
 ## Feature
 Add guide in side, vertical and horizontal direction,
 also can remove all guides.
-
 
 ![Demo](https://celynxie.firebaseapp.com/lib/image/photo/guideup.png)
 
