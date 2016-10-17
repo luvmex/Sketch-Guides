@@ -15,49 +15,49 @@
             "script": "guides.sketchscript"
         },
         {
-            "name": "1. Top Guide",
+            "name": "Top Guide",
             "identifier": "topGuide",
             "shortcut": "",
             "handler" : "topGuide",
             "script": "guides.sketchscript"
         },
         {
-            "name": "2. Right Guide",
+            "name": "Right Guide",
             "identifier": "rightGuide",
             "shortcut": "",
             "handler" : "rightGuide",
             "script": "guides.sketchscript"
         },
         {
-            "name": "3. Bottom Guide",
+            "name": "Bottom Guide",
             "identifier": "bottomGuide",
             "shortcut": "",
             "handler" : "bottomGuide",
             "script": "guides.sketchscript"
         },
         {
-            "name": "4. left Guide",
+            "name": "left Guide",
             "identifier": "leftGuide",
             "shortcut": "",
             "handler" : "leftGuide",
             "script": "guides.sketchscript"
         },
         {
-            "name": "5. vCenter Guide",
+            "name": "Vertically Center Guide",
             "identifier": "vCenterGuide",
             "shortcut": "",
             "handler" : "vCenterGuide",
             "script": "guides.sketchscript"
         },
         {
-            "name": "6. hCenter Guide",
+            "name": "Horizontally Center Guide",
             "identifier": "hCenterGuide",
             "shortcut": "",
             "handler" : "hCenterGuide",
             "script": "guides.sketchscript"
         },
         {
-            "name": "7. Remove All Guides",
+            "name": "Remove All Guides",
             "identifier": "removeAllGuides",
             "shortcut": "",
             "handler" : "removeAllGuides",
