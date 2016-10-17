@@ -1,4 +1,4 @@
-![Demo](https://celynxie.firebaseapp.com/lib/image/photo/GuideAvatar.png)
+![Demo](https://celynxie.firebaseapp.com/lib/image/photo/Avatar.png)
 
 # Sketch Guides
 ###Add Guides to edges and midpoints at once.
@@ -23,7 +23,7 @@ Just press to lauch Interface Control Tool :
 ## Interface Control tool
 Support intuition interface don't need to use hot-key anymore, that you can just click to use!
 
-![Tool UI](https://celynxie.firebaseapp.com/lib/image/photo/ControlBar_Rect.png)
+![Tool UI](https://celynxie.firebaseapp.com/lib/image/photo/ControlUI.png)
 
 
 ## Installing Plugins
