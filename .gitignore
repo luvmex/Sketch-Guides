@@ -1,5 +1,5 @@
 
-*.DS_Store
+.DS_Store
 /LandingPage/build/*
 /LandingPage/node_modules/*
 /LandingPage/firebase.json
