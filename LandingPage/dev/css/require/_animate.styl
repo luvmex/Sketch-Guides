@@ -1,0 +1,96 @@
+
+
+.page-intro
+	opacity 0
+	animation-fill-mode both
+
+.animsition-loading, .animsition-loading:after
+	width 40px
+	height 40px
+	position fixed
+	top 50%
+	transform translateY(-50%)
+	left calc( 50% - 20px )
+	border-radius 50%
+	z-index 100
+.animsition-loading
+	background-color transparent
+	border-top 1px solid rgba(0, 0, 0, 0.5)
+	border-right 1px solid rgba(0, 0, 0, 0.5)
+	border-bottom 1px solid rgba(0, 0, 0, 0.5)
+	border-left 1px solid #eee
+	transform translateZ(0)
+	animation-iteration-count infinite
+	animation-timing-function linear
+	animation-duration 0.4s
+	animation-name loading
+
+
+.nav-in
+	animation-name nav-in
+.nav-out
+	animation-name nav-out
+.footer-in
+	animation-name footer-in
+.footer-out
+	animation-name footer-out
+.fade-in
+	animation-name fade-in
+.fade-out
+	animation-name fade-out
+
+
+@keyframes nav-in
+	0%
+		opacity 0
+		transform translateY(-120px)
+	100%
+		opacity 1
+		transform translateY(0px)
+
+
+@keyframes nav-out
+	0%
+		opacity 1
+		transform translateY(0px)
+	100%
+		opacity 0
+		transform translateY(-120px)
+
+
+@keyframes footer-in
+	0%
+		opacity 0
+		transform translateY(120px)
+	100%
+		opacity 1
+		transform translateY(0px)
+
+@keyframes footer-out
+	0%
+		opacity 1
+		transform translateY(0px)
+	100%
+		opacity 0
+		transform translateY(120px)
+		
+
+
+@keyframes fade-in
+	0%
+		opacity 0
+	100%
+		opacity 1
+
+@keyframes fade-out
+	0%
+		opacity 1
+	100%
+		opacity 0
+
+
+@keyframes loading
+	0%
+		transform rotate(0deg)
+	100%
+		transform rotate(360deg)

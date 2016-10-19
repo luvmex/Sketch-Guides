@@ -1,0 +1,60 @@
+@lost gutter 0px;
+@require '/require/_var.styl'
+@require '/require/_reset.styl'
+
+
+global-reset()
+nested-reset()
+
+rupture.enable-em-breakpoints = true
+
+body
+	background: #fff
+	width 100%
+	height 100%
+	font-size 100%
+	letter-spacing 1px
+	font-family 'Helvetica Neue', 'Helvetica','Arial', sans-serif
+	-webkit-overflow-scrolling: touch;
+
+
+p
+	display: block
+	font-size 1.2rem
+	font-weight 300
+	line-height 30px
+	max-width 700px
+	margin 0px auto
+	
+
+h2
+	font-size 2.6rem
+	letter-spacing 3px
+	line-height 70px
+	font-weight 100
+	
+::selection
+	background $lightred
+	color $white
+::-o-selection
+	background $lightred
+	color $white
+::-moz-selection
+	background $lightred
+	color $white
+::-webkit-selection
+	background $lightred
+	color $white
+
+.page
+	width 100%
+	height auto
+	position relative
+	overflow-x hidden
+
+
+@import '/require/_animate.styl'
+@import '/layout/_footer.styl'
+@import '/index.styl'
+
+
