@@ -1,0 +1,6 @@
+
+*.DS_Store
+/LandingPage/build/*
+/LandingPage/node_modules/*
+/LandingPage/firebase.json
+/LandingPage/database.rules.json
