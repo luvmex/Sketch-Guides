@@ -5,6 +5,9 @@
 
 **Sketch 40.^ support**
 
+
+[Landing Page](https://celynxie.com)
+
 In the past few years I have designed UI with Photoshop plugin named Velositey 1.0, and it has saved a lot of time to setup the guides in manually. Since I transfered to use Sketch I can't find similar plugin for it. So last week I decided to build my own plugin, and now I presend you my first Sketch Plugin.
 
 

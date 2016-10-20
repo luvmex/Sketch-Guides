@@ -196,7 +196,7 @@ CX.extend({
             ControlBar.setTitlebarAppearsTransparent(true);
             ControlBar.setFrame_display(NSMakeRect(0, 0, 570, 50), false);
             ControlBar.setMovableByWindowBackground(true);
-            ControlBar.setHasShadow(false);
+            ControlBar.setHasShadow(true);
             // ControlBar.setContentView();
 
             // ControlBar.becomeKeyWindow();

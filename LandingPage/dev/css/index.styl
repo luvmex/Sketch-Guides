@@ -14,6 +14,25 @@
 		lost-utility clearfix
 		text-align center
 		background: $lightgrey
+		+below(880px)
+			padding 30px 0
+			.imgBox
+				lost-center 100%
+				padding 15px
+			.contentBox
+				lost-center 100%
+				.brand-title
+					font-size 2rem
+					line-height 40px
+				.brand-describe
+					padding 10px
+					font-size 1rem
+			.headerDownload
+				lost-center 100%
+				padding 30px
+				a
+					padding 5px 15px
+					font-size 1rem
 		.imgBox
 			position: relative
 			display: block
@@ -61,6 +80,13 @@
 		position: relative
 		lost-center 100%
 		text-align center
+		+below(1080px)
+			.tutorial
+				max-width 880px
+		+below(880px)
+			.tutorial
+				display none
+				visibility hidden
 		.tutorial
 			position: relative
 			display: block
@@ -96,6 +122,11 @@
 		lost-center 100%
 		text-align center
 		margin-bottom 100px
+		+below(880px)
+			margin-top 60px
+			margin-bottom 60px
+			img
+				max-width 100%
 		p
 			padding 30px
 			color $grey
@@ -111,6 +142,25 @@
 		background: $darkgrey
 		padding 100px 0 60px 0
 		overflow-x hidden
+		+below(1080px)
+			padding 30px 0 30px 0
+			.left-content
+				lost-column 1/1
+				padding 30px
+				.box
+					padding-top 0
+			.right-img
+				lost-column 1/1
+				max-height auto
+				.screen
+					height auto
+					width 100%
+					transform translateX(0px)
+				.controltool
+					top 0
+					right 0
+					width 100%
+					padding 20px
 		.left-content
 			position: relative
 			lost-column 2/5
@@ -146,6 +196,16 @@
 		background: $white
 		padding 100px 0
 		text-align center
+		+below(880px)
+			padding 60px 0
+			.content
+				p
+					padding 10px
+			.download
+				a
+					padding 5px 15px
+					margin 10px 0 5px 0
+					font-size 1rem
 		.content
 			p
 				padding 30px

@@ -25,13 +25,18 @@ p
 	line-height 30px
 	max-width 700px
 	margin 0px auto
-	
+	+below(880px)
+		max-width 600px
+		font-size 1rem
 
 h2
 	font-size 2.6rem
 	letter-spacing 3px
 	line-height 70px
 	font-weight 100
+	+below(880px)
+		font-size 2rem
+		line-height 40px
 	
 ::selection
 	background $lightred
