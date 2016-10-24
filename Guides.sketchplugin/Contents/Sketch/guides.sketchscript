@@ -21,14 +21,10 @@ function vCenterGuide(context){
 }
 
 function hCenterGuide(context){
-    CX.init(context, "h-Center-guide");
+    CX.init(context, "h-center-guide");
 }
 
-function hCenterGuide(context){
-    CX.init(context, "h-Center-guide");
-}
-
-function removeAllGudes(context){
+function removeAllGuides(context){
     CX.init(context, "remove-all-guides");
 }
 
