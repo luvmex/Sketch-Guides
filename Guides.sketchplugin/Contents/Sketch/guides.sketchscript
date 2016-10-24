@@ -24,6 +24,14 @@ function hCenterGuide(context){
     CX.init(context, "h-center-guide");
 }
 
+function topBottom(context){
+	CX.init(context, "top-bottom-guides");
+}
+
+function rightLeft(context){
+	CX.init(context, "right-left-guides");
+}
+
 function removeAllGuides(context){
     CX.init(context, "remove-all-guides");
 }

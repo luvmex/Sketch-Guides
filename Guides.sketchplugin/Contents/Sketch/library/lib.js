@@ -42,6 +42,12 @@ var CX = {
                 case "h-center-guide":
                     this.hCenterGuide();
                     break;
+                case "top-botom-guides":
+                    this.topBottomGuides();
+                    break;
+                case "right-left-guides":
+                    this.rightLeftGuides();
+                    break;
                 case "remove-all-guides":
                     this.removeAllGuides();
                     break;
@@ -165,6 +171,18 @@ CX.extend({
         if(!this.selectError()) return;
         this.artboard.verticalRulerData().addGuideWithValue(this.setCount().hCenter);
     },
+    topBottomGuides: function(){
+        var self = this;
+        if(!this.selectError()) return;
+        this.artboard.verticalRulerData().addGuideWithValue(this.setCount().top);
+        this.artboard.verticalRulerData().addGuideWithValue(this.setCount().bottom);
+    },
+    rightLeftGuides: function(){
+        var self = this;
+        if(!this.selectError()) return;
+        this.artboard.horizontalRulerData().addGuideWithValue(this.setCount().right);
+        this.artboard.horizontalRulerData().addGuideWithValue(this.setCount().left);
+    },
     removeAllGuides: function(){
         var self = this;
         horizontalGuideCount = this.artboard.horizontalRulerData().numberOfGuides();
@@ -194,7 +212,7 @@ CX.extend({
             ControlBar.setBackgroundColor(NSColor.colorWithRed_green_blue_alpha(0.99, 0.99, 0.99, 1));
             ControlBar.setTitleVisibility(NSWindowTitleHidden);
             ControlBar.setTitlebarAppearsTransparent(true);
-            ControlBar.setFrame_display(NSMakeRect(0, 0, 570, 50), false);
+            ControlBar.setFrame_display(NSMakeRect(0, 0, 640, 50), false);
             ControlBar.setMovableByWindowBackground(true);
             ControlBar.setHasShadow(true);
             // ControlBar.setContentView();
@@ -235,64 +253,80 @@ CX.extend({
                         threadDictionary.removeObjectForKey(identifier);
                         ControlBar.close();
                 }),
-                topGuideB = addButton( NSMakeRect(120, 10, 30, 30), "top-guide",
+                topGuideB = addButton( NSMakeRect(100, 10, 30, 30), "top-guide",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "top-guide");
                 }),
-                rightGuideB = addButton( NSMakeRect(170, 10,30,30), "right-guide",
+                rightGuideB = addButton( NSMakeRect(150, 10,30,30), "right-guide",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "right-guide");
                 }),
-                bottomGuideB = addButton( NSMakeRect(220, 10,30,30), "bottom-guide",
+                bottomGuideB = addButton( NSMakeRect(200, 10,30,30), "bottom-guide",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "bottom-guide");
                 }),
-                leftGuideB = addButton( NSMakeRect(270, 10,30,30), "left-guide",
+                leftGuideB = addButton( NSMakeRect(250, 10,30,30), "left-guide",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "left-guide");
                 }),
-                vCenterGuideB = addButton( NSMakeRect(370, 10,30,30), "v-center-guide",
+                vCenterGuideB = addButton( NSMakeRect(330, 10,30,30), "v-center-guide",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "v-center-guide");
                 }),
-                hCenterGuideB = addButton( NSMakeRect(420, 10,30,30), "h-center-guide",
+                hCenterGuideB = addButton( NSMakeRect(380, 10,30,30), "h-center-guide",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "h-center-guide");
                 }),
-                removeAllGuidesB = addButton( NSMakeRect(520, 10,30,30), "remove-all-guides",
+                topBottomGuides = addButton( NSMakeRect(460,10,30,30),"top-bottom-guides",
+                    function(sender){
+                        self.updateContext();
+                        self.init(self.context, "top-right-guides");
+                }),
+                rightLeftGuides = addButton ( NSMakeRect(510, 10, 30,30), "right-left-guides",
+                    function(sneder){
+                        self.updateContext();
+                        self.init(self.context, "right-left-guides");
+                }),
+                removeAllGuidesB = addButton( NSMakeRect(590, 10,30,30), "remove-all-guides",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "remove-all-guides");
                 }),
                 
 
-                separate1 = addImage( NSMakeRect(80, 10, 10, 30), "separate"),
-                separate2 = addImage( NSMakeRect(330, 10, 10, 30), "separate"),
-                separate3 = addImage( NSMakeRect(480, 10, 10, 30), "separate");
+                separate1 = addImage( NSMakeRect(70, 10, 10, 30), "separate"),
+                separate2 = addImage( NSMakeRect(300, 10, 10, 30), "separate"),
+                separate3 = addImage( NSMakeRect(430, 10, 10, 30), "separate"),
+                separate4 = addImage( NSMakeRect(560, 10, 10, 30), "separate");
 
             contentView.addSubview(closeButton);
+            
+            contentView.addSubview(separate1);
 
             contentView.addSubview(topGuideB);
             contentView.addSubview(rightGuideB);
             contentView.addSubview(bottomGuideB);
             contentView.addSubview(leftGuideB);
 
-            contentView.addSubview(separate1);
+            contentView.addSubview(separate2);
 
             contentView.addSubview(vCenterGuideB);
             contentView.addSubview(hCenterGuideB);
 
-            contentView.addSubview(separate2);
+            contentView.addSubview(separate3);
+
+            contentView.addSubview(topBottomGuides);
+            contentView.addSubview(rightLeftGuides);
+            
+            contentView.addSubview(separate4);
 
             contentView.addSubview(removeAllGuidesB);
-            
-            contentView.addSubview(separate3);
 
             threadDictionary[identifier] = ControlBar;
 

@@ -57,6 +57,20 @@
             "script": "guides.sketchscript"
         },
         {
+            "name": "TopBottom Guides",
+            "identifier": "topBottomGuides",
+            "shortcut": "",
+            "handler" : "topBottomGuides",
+            "script": "guides.sketchscript"
+        },
+        {
+            "name": "RightLeft Guides",
+            "identifier": "rightLeftGuides",
+            "shortcut": "",
+            "handler" : "rightLeftGuides",
+            "script": "guides.sketchscript"
+        },
+        {
             "name": "Remove All Guides",
             "identifier": "removeAllGuides",
             "shortcut": "",
@@ -76,6 +90,9 @@
             "-",
             "vCenterGuide",
             "hCenterGuide",
+            "-",
+            "topBottomGuides",
+            "rightLeftGuides",
             "-",
             "removeAllGuides",
         ],
