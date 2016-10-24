@@ -24,11 +24,11 @@ function hCenterGuide(context){
     CX.init(context, "h-center-guide");
 }
 
-function topBottom(context){
+function topBottomGuides(context){
 	CX.init(context, "top-bottom-guides");
 }
 
-function rightLeft(context){
+function rightLeftGuides(context){
 	CX.init(context, "right-left-guides");
 }
 

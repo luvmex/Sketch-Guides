@@ -42,7 +42,7 @@ var CX = {
                 case "h-center-guide":
                     this.hCenterGuide();
                     break;
-                case "top-botom-guides":
+                case "top-bottom-guides":
                     this.topBottomGuides();
                     break;
                 case "right-left-guides":
@@ -286,7 +286,7 @@ CX.extend({
                 topBottomGuides = addButton( NSMakeRect(460,10,30,30),"top-bottom-guides",
                     function(sender){
                         self.updateContext();
-                        self.init(self.context, "top-right-guides");
+                        self.init(self.context, "top-bottom-guides");
                 }),
                 rightLeftGuides = addButton ( NSMakeRect(510, 10, 30,30), "right-left-guides",
                     function(sneder){
