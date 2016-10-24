@@ -1,4 +1,4 @@
-![Demo](https://celynxie.com/lib/image/Avatar.png)
+![Demo](https://celynxie.com/lib/image/gitavatar.png)
 
 # Sketch Guides
 ###Add Guides to edges and midpoints at once.
