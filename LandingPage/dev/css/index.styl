@@ -18,21 +18,41 @@
 			padding 30px 0
 			.imgBox
 				lost-center 100%
+				margin-top 30px
 				padding 15px
 			.contentBox
 				lost-center 100%
 				.brand-title
-					font-size 2rem
+					font-size 2.4rem
 					line-height 40px
+					padding 20px 0
 				.brand-describe
-					padding 10px
+					padding 0px 0 10px 0
 					font-size 1rem
+					font-weight 400
+					color $grey
 			.headerDownload
 				lost-center 100%
 				padding 30px
 				a
 					padding 5px 15px
 					font-size 1rem
+					font-weight 200
+		+below(480px)
+			.imgBox
+				padding 0px
+				height 70px
+				img
+					height 100%
+					width: auto
+			.contentBox
+				padding 0 20px
+				.brand-title
+					font-size 2rem
+				.brand-describe
+					text-align left
+					word-break break-all
+					word-wrap break-word
 		.imgBox
 			position: relative
 			display: block
@@ -50,9 +70,9 @@
 				line-height 100px
 			.brand-describe
 				padding 30px 30px 0 30px
-				color $grey
-				font-size 1.2rem
-				font-weight 200
+				color $darkgrey
+				font-size 1.1rem
+				font-weight 300
 		.headerDownload
 			position: relative
 			lost-center 85%
@@ -127,15 +147,25 @@
 			margin-bottom 60px
 			img
 				max-width 100%
+			p
+				font-size 1rem
+				font-weight 400
+				color $grey
 		p
 			padding 30px
-			color $grey
+			font-weight 300
+			color $darkgrey
 		img
 			display: block
 			margin 0px auto
 			padding 30px
 			max-width 830px
 			height auto
+		+below(480px)
+			p
+				text-align left
+				word-break break-all
+				word-wrap break-word
 	.s3
 		position: relative
 		lost-center 100%
@@ -149,6 +179,7 @@
 				padding 30px
 				.box
 					padding-top 0
+					text-align center
 			.right-img
 				lost-column 1/1
 				max-height auto
@@ -159,8 +190,22 @@
 				.controltool
 					top 0
 					right 0
-					width 100%
+					width 70%
 					padding 20px
+		+below(880px)
+			.left-content
+				.box
+					p
+						color $smoggrey
+						font-size 1rem
+						font-weight 400
+		+below(480px)
+			.left-content
+				.box
+					p
+						text-align left
+						word-break break-all
+						word-wrap break-word
 		.left-content
 			position: relative
 			lost-column 2/5
@@ -197,19 +242,35 @@
 		padding 100px 0
 		text-align center
 		+below(880px)
-			padding 60px 0
+			padding 60px 20px
 			.content
 				p
 					padding 10px
+					font-size 1rem
+					margin-top 20px
+					font-weight 400
+					color $grey
 			.download
 				a
 					padding 5px 15px
-					margin 10px 0 5px 0
+					margin 20px 0 5px 0
 					font-size 1rem
+					font-weight 200
+		+below(480px)
+			.content
+				p
+					text-align left
+					word-break break-all
+					word-wrap break-word
+			.donate
+				margin-top 100px
+				&::before
+					height 50px
+					bottom 110px
 		.content
 			p
 				padding 30px
-				color $grey
+				color $darkgrey
 				a
 					color rgba(50,90,200,1)
 					&:hover
