@@ -14,14 +14,11 @@ var CX = {
         this.page = this.doc.currentPage();
         this.artboard = this.page.currentArtboard();
         this.current = this.artboard || this.page;
-        
         coscript.setShouldKeepAround(true);
-
         if(command && command == "controlbar"){
             this.ControlBar();
             return false;
         }
-
         if(command){
             switch(command){
                 case "top-guide":
@@ -55,7 +52,6 @@ var CX = {
         }
 
     },
-
     extend: function( options, target ){
         var target = target || this;
         for ( var key in options ){
@@ -63,7 +59,6 @@ var CX = {
         }
         return target;
     }
-
 };
 
 
@@ -86,8 +81,6 @@ CX.extend({
     },
 });
 
-
-
 CX.extend({
     getDistance: function(targetRect, containerRect){
         var containerRect = containerRect || this.getRect(this.current);
@@ -95,8 +88,6 @@ CX.extend({
             top: (targetRect.y - containerRect.y),
             right: ((targetRect.x - containerRect.x) + targetRect.width),
             bottom: ((targetRect.y - containerRect.y) + targetRect.height),
-            // right:(containerRect.maxX - targetRect.maxX),
-            // bottom:(containerRect.maxY - targetRect.maxY),
             left:(targetRect.x - containerRect.x),
             vCenter:((targetRect.x - containerRect.x) + (targetRect.width / 2)),
             hCenter:((targetRect.y - containerRect.y) + (targetRect.height / 2)),
@@ -205,7 +196,6 @@ CX.extend({
             identifier = "celyn.guide",
             threadDictionary = NSThread.mainThread().threadDictionary(),
             ControlBar = threadDictionary[identifier];
-
         if(!ControlBar){
             ControlBar = NSPanel.alloc().init();
             ControlBar.setStyleMask(NSTitledWindowMask + NSFullSizeContentViewWindowMask);
@@ -215,11 +205,7 @@ CX.extend({
             ControlBar.setFrame_display(NSMakeRect(0, 0, 640, 50), false);
             ControlBar.setMovableByWindowBackground(true);
             ControlBar.setHasShadow(true);
-            // ControlBar.setContentView();
-
-            // ControlBar.becomeKeyWindow();
             ControlBar.setLevel(NSFloatingWindowLevel);
-
             var contentView = ControlBar.contentView(),
                 getImage = function(size, name){
                     var isRetinaDisplay = (NSScreen.mainScreen().backingScaleFactor() > 1)? true: false;
@@ -298,38 +284,25 @@ CX.extend({
                         self.updateContext();
                         self.init(self.context, "remove-all-guides");
                 }),
-                
-
                 separate1 = addImage( NSMakeRect(70, 10, 10, 30), "separate"),
                 separate2 = addImage( NSMakeRect(300, 10, 10, 30), "separate"),
                 separate3 = addImage( NSMakeRect(430, 10, 10, 30), "separate"),
                 separate4 = addImage( NSMakeRect(560, 10, 10, 30), "separate");
-
             contentView.addSubview(closeButton);
-            
             contentView.addSubview(separate1);
-
             contentView.addSubview(topGuideB);
             contentView.addSubview(rightGuideB);
             contentView.addSubview(bottomGuideB);
             contentView.addSubview(leftGuideB);
-
             contentView.addSubview(separate2);
-
             contentView.addSubview(vCenterGuideB);
             contentView.addSubview(hCenterGuideB);
-
             contentView.addSubview(separate3);
-
             contentView.addSubview(topBottomGuides);
             contentView.addSubview(rightLeftGuides);
-            
             contentView.addSubview(separate4);
-
             contentView.addSubview(removeAllGuidesB);
-
             threadDictionary[identifier] = ControlBar;
-
             ControlBar.center();
             ControlBar.makeKeyAndOrderFront(nil);
         }
