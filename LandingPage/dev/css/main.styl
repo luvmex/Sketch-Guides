@@ -3,8 +3,8 @@
 @require '/require/_reset.styl'
 
 
-global-reset()
-nested-reset()
+// global-reset()
+// nested-reset()
 
 rupture.enable-em-breakpoints = true
 
@@ -14,9 +14,13 @@ body
 	height 100%
 	font-size 100%
 	letter-spacing 1px
-	font-family 'Helvetica Neue', 'Helvetica','Arial', sans-serif
 	-webkit-overflow-scrolling: touch;
 
+*
+	font-family 'Helvetica Neue', 'Helvetica','Arial', sans-serif
+
+.disable-hover, .disable-hover *
+	pointer-events none !important
 
 p
 	display: block
@@ -64,6 +68,8 @@ h2
 
 @import '/require/_animate.styl'
 @import '/layout/_footer.styl'
+@import '/layout/_nav.styl'
+@import '/layout/_scrolltop.styl'
 @import '/index.styl'
 
 

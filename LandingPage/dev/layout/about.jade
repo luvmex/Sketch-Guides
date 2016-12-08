@@ -1,0 +1,60 @@
+//- <!-- <!DOCTYPE html> -->
+html(lang="en")
+	head
+		include import/_meta.jade
+		title About Celyn
+		link(rel="stylesheet", href="./css/about.css")
+		script(src='./js/js.js')
+
+	body
+		.animsition-loading
+
+		include include/_nav.jade
+		//- include include/_menu.jade
+		
+		#about.page.page-intro(data-animsition-in-class="fade-in",data-animsition-out-class='fade-out',data-animsition-in-duration='1000')
+			header#about-header.header.fullhh
+				.header-content
+					h2.pagetitle.about-title Celyn Xie
+					p.about-describe “ I link form and content. ”
+				.header-left
+				.header-right
+					//- img(src="lib/image/photo/aboutbg.jpg", alt="")
+				a(href="#about-content")#scrollnext
+					.scrollline
+			section#biography.showupline
+				#about-content.bio-about
+					h2 HI, THERE.
+					p
+						| I’m a self-taught multidisciplinary designer. 
+						| My design is strongly influenced by 
+						a(href="#") Minimalism
+						| , design with the intent of an improved future result, producing by considering both present and future conditions of the problem in process, always defined reason behind the design I create. And rendering design in consistency and affordances.
+					p
+						| I began in StartUp. 
+						| Focus on user interface and user experience for different device between web and mobile both products. Otherwise, I have basic develop competence to through understanding the way of designer thinking and engineer programming logic. It’s helpful to expend the design limitation and have clearly communication in effectively in order to design product reasonable and tangible.
+				.bio-work
+					.workbox
+						.work-project Freelance
+						.work-title Designer
+						.work-locate Taiwan, Tainan
+					.workbox
+						.work-project Coop
+						.work-title UI/UX Designer
+						.work-locate Taiwan, Tainan
+					.workbox
+						.work-project Saihu
+						.work-title Lead Designer
+						.work-locate China, Xiamen
+					.workbox
+						.work-project 
+							| Rakuten 
+							i - Current now
+						.work-title Product Designer
+						.work-locate Taiwan, Taipei
+				.bio-bottom
+					.bottom-quote
+					.bottom-signature
+						//- img(src="./lib/image/photo/signature.png", alt="signature")
+		include include/_footer.jade
+		include include/_scrolltop.jade

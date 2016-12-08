@@ -1,0 +1,128 @@
+#scrolltop
+	position fixed
+	display block
+	width 50px
+	height 50px
+	bottom -50px
+	right 5vw
+	transition transform 0.3s ease-in-out 0.1s, bottom 0.3s linear 0s, opacity 0.3s linear 0s
+	z-index 99
+	cursor pointer
+	+below(880px)
+		display none
+		visibility hidden
+	&:hover
+		.scrolllineup
+			bottom 10px
+			height 40px
+	.scrolllineup
+		position absolute
+		bottom 0px
+		left 25px
+		width 1px
+		height 30px
+		background $darkgrey
+		transition bottom 0.21s ease-in-out 0s, height 0.21s ease-in-out 0s
+		&::after, &::before
+			content ''
+			transform rotate(45deg)
+			position absolute
+			top 3px
+			left -1px
+			background black
+			width 10px
+			height 1px
+			background $darkgrey
+		&::before
+			transform rotate(-45deg)
+			left -8px
+
+// .scrolltop
+// 	position fixed
+// 	width 80px
+// 	height 80px
+// 	// bottom 70px
+// 	display block
+// 	bottom 0%
+// 	right 50px
+// 	padding 7px
+// 	// display none
+// 	transition transform 0.3s ease-in-out 0.1s, bottom 0.3s linear 0s, opacity 0.3s linear 0s
+// 	z-index 99
+// 	cursor pointer
+// 	background black
+	
+// 	&:after
+// 		content ''
+// 		position absolute
+// 		width 5px
+// 		height 5px
+// 		right 43px
+// 		bottom 25px
+// 		background $main
+// 		box-shadow 0px 0px 0px black
+// 		transition box-shadow 0.3s ease-in-out 0.1s, transform 1s ease-in-out 1s
+// 		z-index -1
+// 	img
+// 		width 80px
+// 		height auto
+		
+// 	.airplane
+// 		position absolute
+// 		padding 0px
+// 		height 100px
+// 		width 100px
+// 		top -3px
+// 		right -9px
+// 		z-index -1
+// 		.hover
+// 			position absolute
+// 			width 100%
+// 			height 100%
+// 			background transparent
+// 			// background black
+// 			border 0px solid $main
+// 			border-radius 50%
+// 			right 4px
+// 			bottom 2px
+// 			opacity 0.6
+
+// 	&:hover
+// 		// transform translate(0px, -15px)
+// 		&:after
+// 			box-shadow 10px 15px 80px 5px darken(black, 50%)
+// 		.airplane
+// 			.hover
+// 				// transform scale(0.03)
+// 				animation-name Aready
+// 				animation-duration 400ms
+// 				animation-iteration-count 1
+// 				animation-timing-function ease-in-out
+
+// @keyframes Aready
+// 	0%
+// 		transform scale(0.01)
+// 		border 0px solid alpha(rgb(230,230,230), 0%)
+// 	20%
+// 		border 15px solid alpha(rgb(230,230,230), 60%)
+// 		transform scale(0.7)
+// 	40%
+// 		border 20px solid alpha(rgb(230,230,230), 80%)
+// 		transform scale(1)
+// 	50%
+// 		border 16px solid alpha(rgb(230,230,230), 100%)
+// 		transform scale(1.1)
+// 	95%
+// 		border 2px solid alpha(rgb(230,230,230), 60%)
+// 		transform scale(1.5)
+// 	99%
+// 		border 1px sloid alpha(rgb(230,230,230), 0%)
+// 		transform scale(1.5)
+// 	100%
+// 		border 0
+// 		transform scale(0)
+
+
+
+
+

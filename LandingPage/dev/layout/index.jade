@@ -6,7 +6,9 @@ html(lang="en")
 		script(src='./js/js.js')
 	body
 		.animsition-loading
-			
+		
+		include include/_nav.jade
+
 		#main.page-intro(data-animsition-in-class="fade-in",data-animsition-out-class='fade-out',data-animsition-in-duration='1000')
 			header
 				.imgBox
@@ -16,11 +18,12 @@ html(lang="en")
 					p.brand-describe A Plugin now with a beautifully easy-to-use interface, simply add accurate guides to edges and midpoints at once, it has never been quicker and easier.
 				.headerDownload
 					a(href='https://github.com/luvmex/Sketch-Guides/archive/master.zip', download='SketchGuides') Download Plugin
-					h6 Available for Sketch 40.^
-			section.s1
-				.tutorial(data-vide-bg="mp4: https://sketchguides-36629.firebaseapp.com/lib/video/box.mp4", data-vide-options="position: 0% 0%")
-					.videoimage(href="https://sketchguides-36629.firebaseapp.com/lib/video/box.png")
-						p Sorry, The video can't work.
+					h6 Available for Sketch 41.^
+			section.s1.showupline
+				.shadowBox
+					.tutorial(data-vide-bg="mp4: /lib/video/box.mp4", data-vide-options="position: 0% 0%")
+						.videoimage(href="/lib/video/box.png")
+							p Sorry, The video can't work.
 			section.s2
 				h2 Intuition User Interface
 				p When you launch guides interface control tools, it’s free to keep or close the window on your Sketch app, It will makes complex work as easy as click, be enjoy in once new way.
@@ -36,12 +39,10 @@ html(lang="en")
 			section.s4
 				.content
 					h2 Design in faster and more smoothly
-					p 
-						| In past few years, I have designed UI in Photoshop with a plugin named 
-						a(href="http://dandkagency.com/extensions/velositey/") Velositey 1.0 
-						| ,and it has saved a lot of time to setup the guides without manually. Since I transfered to use Sketch I can't find similar plugin for it. So I try to build it myself, and now I presend to you this Sketch Plugin. Hope you enjoy it.
+					p.
+						Help you to saved a lot of time in setup the guides without manually. That me show you this remarkable sketch plugin. Just download it and enjoy for design work.
 				.download
-					a(href="https://github.com/luvmex/Sketch-Guides/archive/master.zip", download='SketchGuides') Get Free Download
+					a(href="https://github.com/luvmex/Sketch-Guides/archive/master.zip", download='SketchGuides') Download for Free
 				.donate
 					h6 If you like it, Just buy me a drink.
 					form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
@@ -51,6 +52,7 @@ html(lang="en")
 						img(alt='', border='0', src='https://www.paypal.com/en_US/i/scr/pixel.gif', width='1', height='1')
 
 		include include/_footer.jade
+		include include/_scrolltop.jade
 
 		script(src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js")
 		script.

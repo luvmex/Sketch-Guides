@@ -65,10 +65,23 @@
 			position: relative
 			lost-center 85%
 			.brand-title
+				position: relative
+				display inline-block
+				margin 0px auto
 				font-size 4rem
 				font-weight 100
 				line-height 100px
+				&::after
+					position: absolute
+					display: inline-block
+					content ''
+					background: url('/lib/image/guideline.svg') no-repeat
+					height 30px
+					width 30px
+					top 20px
+					right -40px
 			.brand-describe
+				position: relative
 				padding 30px 30px 0 30px
 				color $darkgrey
 				font-size 1.1rem
@@ -86,11 +99,11 @@
 				font-size 1.4rem
 				font-weight 100
 				line-height 30px
-				box-shadow 0px 5px 20px 0px $smoggrey
-				transition box-shadow 0.17s ease-in-out 0s, background 0.17s ease-in-out 0s
+				box-shadow 0px 25px 50px 0px alpha($black, 15%)
+				transition box-shadow 0.23s ease-in-out 0s, background 0.23s ease-in-out 0s
 				&:hover
 					background: darken($lightred, 10%)
-					box-shadow 0px 10px 25px 2px $smoggrey
+					box-shadow 0px 50px 100px alpha($black, 15%)
 			h6
 				padding 20px 0
 				color $darkgrey
@@ -114,9 +127,24 @@
 			max-width 1080px
 			height 600px
 			transform translateY(-100px)
-			box-shadow 0px 0px 10px $lightgrey, 0px 6px 40px $smoggrey
+			// box-shadow 0px 0px 10px $lightgrey, 0px 6px 40px $smoggrey
+			box-shadow 0 2px 2px alpha(black, 20%)
 			border-radius 4px
-			overflow hidden
+			// overflow hidden
+			video
+				transform translate3d(0,0,0)
+			&::before
+				position absolute
+				background-color red
+				content ""
+				bottom 0px
+				left 1%
+				width 98%
+				height 20px
+				border-radius 0 0 50% 50%
+				box-shadow 0 5px 15px alpha(black, 25%)
+				z-index -1
+				transition-duration 0.5s
 			.videoimage
 				position: absolute
 				width 100%
@@ -126,8 +154,9 @@
 				background $lightred
 				background: url('/lib/video/box.png') no-repeat
 				background-size cover
-				background-position: bottom center
+				background-positio/n: bottom center
 				transition opacity 0.17s ease-in-out 0s
+				transform translate3d(0,0,0)
 				p
 					position: relative
 					display: block
@@ -230,6 +259,7 @@
 				z-index: 1
 			.controltool
 				position: absolute
+				transform translate3d(0,0,0)
 				top 10%
 				right 30%
 				width 500px
@@ -279,13 +309,13 @@
 			a
 				display: inline-block
 				padding 15px 40px
-				margin 30px 0 20px 0
+				margin 25px 0 15px 0
 				background: transparent
 				border-radius 50px
 				border 1px solid $lightred
 				color $lightred
 				font-size 1.4rem
-				font-weight 100
+				font-weight 200
 				line-height 30px
 				transition background 0.17s ease-in-out 0s, color 0.17s ease-in-out 0s
 				&:hover
@@ -307,7 +337,7 @@
 				padding 30px 0
 				font-size 1rem
 				font-weight 200
-				color $darkgrey
+				color $black
 		
 				
 		
