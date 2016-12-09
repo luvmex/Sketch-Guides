@@ -5,7 +5,7 @@ html(lang="en")
 		link(rel="stylesheet", href="./css/index.css")
 		script(src='./js/js.js')
 	body
-		.animsition-loading
+		//- .animsition-loading
 		
 		include include/_nav.jade
 
@@ -21,14 +21,16 @@ html(lang="en")
 					h6 Available for Sketch 41.^
 			section.s1.showupline
 				.shadowBox
-					.tutorial(data-vide-bg="mp4: /lib/video/box.mp4", data-vide-options="position: 0% 0%")
-						.videoimage(href="/lib/video/box.png")
+					.tutorial
+						video(src='/lib/video/box.mp4', autoplay='true', loop='true', muted='true', poster='/lib/video/box.jpg')
+					//- .tutorial(data-vide-bg="mp4: /lib/video/box.mp4", data-vide-options="position: 0% 0%")
+						//- .videoimage(href="/lib/video/box.jpeg")
 							p Sorry, The video can't work.
 			section.s2
 				h2 Intuition User Interface
 				p When you launch guides interface control tools, it’s free to keep or close the window on your Sketch app, It will makes complex work as easy as click, be enjoy in once new way.
 				img(src="lib/image/Describe.png", alt="Tool Describe")
-			section.s3
+			section.s3.darkBg
 				.left-content
 					.box
 						h2 Precisely defined
@@ -36,7 +38,7 @@ html(lang="en")
 				.right-img
 					img.screen(src="lib/image/screen.png", alt="Screen Shot")
 					img.controltool(src="lib/image/ControlTool_UI.png", alt="Control Tool UI", data-parallax='{"y": 30}')
-			section.s4
+			section.s4.lightBg
 				.content
 					h2 Design in faster and more smoothly
 					p.

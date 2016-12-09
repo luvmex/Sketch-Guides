@@ -1,41 +1,43 @@
 #scrolltop
 	position fixed
 	display block
-	width 50px
-	height 50px
+	width 40px
+	height 40px
 	bottom -50px
 	right 5vw
-	transition transform 0.3s ease-in-out 0.1s, bottom 0.3s linear 0s, opacity 0.3s linear 0s
+	transition transform 0.3s ease-in-out 0.1s, opacity 0.3s linear 0s, bottom 0.3s ease-in-out 0s
 	z-index 99
 	cursor pointer
+	// overflow hidden
 	+below(880px)
 		display none
 		visibility hidden
 	&:hover
 		.scrolllineup
-			bottom 10px
-			height 40px
+			background: $smoggrey
+			&::after, &::before
+				background: $black
 	.scrolllineup
 		position absolute
-		bottom 0px
-		left 25px
-		width 1px
-		height 30px
-		background $darkgrey
-		transition bottom 0.21s ease-in-out 0s, height 0.21s ease-in-out 0s
+		width 100%
+		height 100%
+		border-radius 50%
+		background $lightgrey
+		transition background 0.24s ease-in-out 0s
+		transform translate3d(0,0,0)
 		&::after, &::before
 			content ''
 			transform rotate(45deg)
 			position absolute
-			top 3px
-			left -1px
+			top 19px
+			left 19px
 			background black
 			width 10px
 			height 1px
 			background $darkgrey
 		&::before
 			transform rotate(-45deg)
-			left -8px
+			left 12px
 
 // .scrolltop
 // 	position fixed

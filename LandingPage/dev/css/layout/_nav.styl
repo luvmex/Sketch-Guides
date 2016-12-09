@@ -23,7 +23,7 @@ nav
 		&.navScroll
 			background alpha($white, 85%)
 	
-	.name
+	#name
 		position relative
 		display block
 		float left
@@ -33,26 +33,42 @@ nav
 		.homelink
 			position relative
 			display inline-block
-			padding 30px 10px 0px
-			line-height 2.5rem
+			padding 30px 0px 0px
+			line-height 2rem
 			font-weight 200
 			font-size 1.3rem
 			text-decoration none
 			color $darkgrey
-			letter-spacing 2px
-			transition color 0.27s ease-in-out 0s, letter-spacing 0.27s ease-in-out 0s
+			transition color 0.13s ease-in-out 0s
 			strong
 				font-weight 500
+			&::after
+				content ''
+				position: absolute
+				bottom 1px
+				left 0
+				width 100%
+				height 1px
+				background: $lightgrey
+				opacity 0
+				transform scaleX(0)
+				transform-origin right
+				transition transform 0.74s cubic-bezier(.19, 1, .22, 1) 0s, opacity 0.26s ease-in-out 0s, background-color 0.19s ease-in-out 0s
 			&:hover
-				letter-spacing 1px
-				color $black
+				// color $black
+				&:after
+					background: $black
+					opacity 1
+					transform scaleX(1)
+					transform-origin left
 		.myTitle
-			padding 0px 10px
+			padding 5px 0px 0px
 			color $darkgrey
 			font-size 1rem
 			font-weight 200
 			letter-spacing 1px
 			transition color 0.27s ease-in-out 0s
+
 
 	// .button
 	// 	position relative

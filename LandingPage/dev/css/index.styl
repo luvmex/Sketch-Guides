@@ -114,57 +114,60 @@
 		lost-center 100%
 		text-align center
 		+below(1080px)
-			.tutorial
+			.shadowBox
 				max-width 880px
 		+below(880px)
-			.tutorial
+			.shadowBox
 				display none
 				visibility hidden
-		.tutorial
+		.shadowBox
 			position: relative
-			display: block
-			margin 0px auto
 			max-width 1080px
-			height 600px
-			transform translateY(-100px)
-			// box-shadow 0px 0px 10px $lightgrey, 0px 6px 40px $smoggrey
-			box-shadow 0 2px 2px alpha(black, 20%)
-			border-radius 4px
-			// overflow hidden
-			video
-				transform translate3d(0,0,0)
-			&::before
-				position absolute
-				background-color red
-				content ""
-				bottom 0px
-				left 1%
-				width 98%
-				height 20px
-				border-radius 0 0 50% 50%
-				box-shadow 0 5px 15px alpha(black, 25%)
-				z-index -1
-				transition-duration 0.5s
-			.videoimage
-				position: absolute
+			height auto
+			margin 0px auto
+			transform translate3d(0,0,0)
+			.tutorial
+				position: relative
+				display: block
 				width 100%
-				height 100%
-				top 0
-				left 0
-				background $lightred
-				background: url('/lib/video/box.png') no-repeat
-				background-size cover
-				background-positio/n: bottom center
-				transition opacity 0.17s ease-in-out 0s
-				transform translate3d(0,0,0)
-				p
-					position: relative
-					display: block
-					top 50%
-					transform translateY(-50%)
-					color $white
-					font-size 1rem
-					font-weight 200
+				transform translateY(-100px)
+				box-shadow 0 2px 2px alpha(black, 20%)
+				border-radius 4px
+				video
+					width 100%
+					
+				&::before
+					position absolute
+					background-color red
+					content ""
+					bottom 0px
+					left 1%
+					width 98%
+					height 20px
+					border-radius 0 0 50% 50%
+					box-shadow 0 5px 15px alpha(black, 25%)
+					z-index -1
+					transition-duration 0.5s
+			// .videoimage
+			// 	position: absolute
+			// 	width 100%
+			// 	height 100%
+			// 	top 0
+			// 	left 0
+			// 	background $lightred
+			// 	background: url('/lib/video/box.png') no-repeat
+			// 	background-size cover
+			// 	background-positio/n: bottom center
+			// 	transition opacity 0.17s ease-in-out 0s
+			// 	transform translate3d(0,0,0)
+			// 	p
+			// 		position: relative
+			// 		display: block
+			// 		top 50%
+			// 		transform translateY(-50%)
+			// 		color $white
+			// 		font-size 1rem
+			// 		font-weight 200
 					
 	.s2
 		position: relative
@@ -339,9 +342,30 @@
 				font-weight 200
 				color $black
 		
-				
-		
-		
+
+// iframe
+// 	html
+// 		body
+// 			#player
+// 				top 0
+// 				position: absolute
+// 				height 110%
+// 				background none
+// 				.video-wrapper
+// 					background none
+// 					.video
+// 						height auto
+// 				.controls-wrapper
+// 					.controls
+// 						position: absolute
+// 						top 50%
+// 						margin 0
+// 						left calc(50% - 39px)
+// 						transform translateY(-50%)
+// 						button.play
+// 							position: absolute
+// 						.play-bar
+// 							display hidden
 
 
 
