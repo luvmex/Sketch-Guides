@@ -7,54 +7,44 @@ html(lang="en")
 		script(src='./js/js.js')
 
 	body
-		.animsition-loading
+		include include/_goback.jade
 
-		include include/_nav.jade
-		//- include include/_menu.jade
-		
-		#about.page.page-intro(data-animsition-in-class="fade-in",data-animsition-out-class='fade-out',data-animsition-in-duration='1000')
-			header#about-header.header.fullhh
-				.header-content
-					h2.pagetitle.about-title Celyn Xie
-					p.about-describe “ I link form and content. ”
-				.header-left
-				.header-right
-					//- img(src="lib/image/photo/aboutbg.jpg", alt="")
-				a(href="#about-content")#scrollnext
+		#about.page.page-intro(data-animsition-in-class='fade-in',data-animsition-out-class='fade-out',data-animsition-in-duration='1000')
+			header.fullHeight
+				.headerInfo
+					h2.title Celyn Xie
+					p.content “ I link form and content. ”
+				.headerLeft
+				.headerRight
+
+				a(href="#main", id='scrolldown')
 					.scrollline
-			section#biography.showupline
-				#about-content.bio-about
-					h2 HI, THERE.
-					p
-						| I’m a self-taught multidisciplinary designer. 
-						| My design is strongly influenced by 
-						a(href="#") Minimalism
-						| , design with the intent of an improved future result, producing by considering both present and future conditions of the problem in process, always defined reason behind the design I create. And rendering design in consistency and affordances.
-					p
-						| I began in StartUp. 
-						| Focus on user interface and user experience for different device between web and mobile both products. Otherwise, I have basic develop competence to through understanding the way of designer thinking and engineer programming logic. It’s helpful to expend the design limitation and have clearly communication in effectively in order to design product reasonable and tangible.
-				.bio-work
-					.workbox
-						.work-project Freelance
-						.work-title Designer
-						.work-locate Taiwan, Tainan
-					.workbox
-						.work-project Coop
-						.work-title UI/UX Designer
-						.work-locate Taiwan, Tainan
-					.workbox
-						.work-project Saihu
-						.work-title Lead Designer
-						.work-locate China, Xiamen
-					.workbox
-						.work-project 
-							| Rakuten 
-							i - Current now
-						.work-title Product Designer
-						.work-locate Taiwan, Taipei
-				.bio-bottom
-					.bottom-quote
-					.bottom-signature
-						//- img(src="./lib/image/photo/signature.png", alt="signature")
-		include include/_footer.jade
-		include include/_scrolltop.jade
+
+			main#main
+				.infoBox
+					.info
+						h2 About me
+						span Designer + Developer in Taiwan
+						p I’m a self-taught multidisciplinary designer began in startup. always defined reason behind the design I create. And bring design into life, experience better.
+						p Focus on UI/UX and Product Design for multiple device between web and mobile. To expand the design limitation and clear communication, I have develop experience to through the way of design thinking and programming logic. It’s helping in create affordance to design.
+				.workBox
+					.quote
+					.info
+						.box
+							p.group Coo.p
+							p.position UI/UX Designer
+							p.located Taiwan, Tainan
+							p.timing 2012,03 - 2014,06
+						.box
+							p.group Saihu
+							p.position Lead Designer
+							p.located China, Xiamen
+							p.timing 2014,10 - 2016,01
+						.box
+							p.group.current Rakuten
+							p.position.current Product Designer
+							p.located.current Taiwan, Taipei
+							p.timing.current 2016,01 - Current Now
+			include include/_footer.jade
+			#scrolltop
+				.scrolllineup

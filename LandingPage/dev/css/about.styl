@@ -1,174 +1,137 @@
 @lost gutter 0px;
 @require '/require/_var.styl'
 
-
 #about
 	opacity 0
-	animation-fill-mode both
-	#about-header
+	animation-fill-mode both		
+	header
 		position relative
 		lost-center 100%
 		lost-utility clearfix
-		#scrollnext
+		+below(880px)
+			display: none
+		.headerInfo
 			position absolute
-			display block
-			width 50px
-			height 50px
-			bottom 10px
-			left calc( 50% - 25px )
-			z-index 4
-			.scrollline
-				position absolute
-				bottom 25px
-				left 25px
-				transition bottom 0.21s ease-in-out 0s
-				&::after, &::before
-					content ''
-					transform rotate(-45deg)
-					position absolute
-					bottom 3px
-					left -1px
-					background black
-					width 10px
-					height 1px
-				&::before
-					transform rotate(45deg)
-					left -8px
-			
-			&:hover
-				.scrollline
-					bottom 20px
-					animation none
-		.header-content
-			position absolute
-			width 600px
+			width 500px
 			height auto
 			display block
-			left 23%
-			top 50%
-			transform translateY(-50%)
+			left calc(50% - 250px)
+			vCenter()
 			z-index 9
-			.about-title
+			.title
 				position relative
 				display block
 				text-align left
-				line-height 9rem
-				font-weight 100
-				font-size 7.5rem
-				opacity 0
-				transition opacity 0.8s linear 0.6s
-				&.aboutTintro
-					opacity 1
-			.about-describe
+				opacity 1
+				topTitle()
+				font-family 'SF UI Display', 'Helvetica Neue', 'Helvetica', sans-serif
+				transform translateY(0px)
+			.content
 				position relative
 				display block
-				color $darkgrey
 				text-align right
 				font-style italic
-				font-size 1.1rem
-				font-weight 200
-				opacity 0
+				Content()
+				opacity 1
 				transition opacity 0.8s linear 0.8s
-				&::before
-					content ''
-					position absolute
-					display block
-					right 800px
-					top 16px
-					width 60px
-					height 1px
-					background $grey
-				&.aboutDintro
-					opacity 1
-					&::before
-						right 250px
-						transition right 1s cubic-bezier(1,0,0,1) 0.6s
-						// trasnform translateX(0px)				
-		.header-left
+				padding-top 10px
+			
+		.headerLeft
 			position relative
 			lost-column 3/5
 			background $whitegrey
 			height 100%
 			z-index 2
-		.header-right
+		.headerRight
 			position relative
 			lost-column 2/5
 			text-align center
 			overflow hidden
 			height 100%
-			background url(../lib/image/aboutbg.jpg) no-repeat
-			background-position center center
+			background url(../lib/image/avatar2.jpg) no-repeat
+			background-position center bottom
 			background-size cover
 			z-index 2
 
-	#biography
+	main
 		position relative
-		lost-center 75%
-		padding 100px 0
-		text-align justify
-		lost-utility clearfix
-		.bio-about
-			lost-column 3/5
-			padding 20px 0
-			position relative
-			h2
+		lost-center 80%
+		margin-bottom 150px
+		+below(880px)
+			margin-top 100px
+			.infoBox
+				.info
+					lost-column 1/1
+					p
+						padding 0
+			.workBox
+				.info
+					lost-column 1/1
+					p
+						padding 0
+		+below(480px)
+			margin-top 0px
+			.workBox
+				.info
+					.box
+						lost-column 1/1
+		.infoBox
+			position: relative
+			width 100%
+			lost-utility clearfix
+			margin-top 100px
+			.info
+				lost-column 3/5
+				text-align justify
 				position relative
-				display block
-				font-size 2.5rem
-				font-weight 500
-				color $darkgrey
-			p
+				h2
+					position relative
+					display block
+					padding 10px 0
+					subTitle()
+				span
+					position: relative
+					display: block
+					margin-top 50px
+					Caption()
+					font-size 14px
+					color $black
+				p
+					position relative
+					display block
+					margin-top 25px
+					padding-right 10%
+					Content()
+					wordbreak()
+					color $grey
+					line-height 30px
+		.workBox
+			position: relative
+			width 100%
+			.info
 				position relative
-				display block
-				margin-top 30px
-				padding-right 10%
-				word-break break-all
-				word-wrap break-word
-				hyphens auto
-				font-size 1rem
-				line-height 1.9rem
-				font-weight 200
-				color black
-				
-			a
-				color $black
-		.bio-work
-			lost-column 2/5
-			padding-left 4%
-			position relative
-			.workbox
-				lost-column 1/2
-				margin-top 100px
-				position relative
-				font-weight 200
-				font-size 1rem
-				color $black
-				.work-project
-					font-weight 400
-					font-size 1.1rem
-					i
-						font-size 0.8rem
-						font-weight 200
+				lost-column 3/5
+				.box
+					lost-column 1/2
+					position relative
+					margin-top 60px
+					Caption()
+					color $grey
+					font-weight 300
+					font-size 14px
+					.group
+						font-size 16px
+						font-weight 400
+					.position
+						padding 10px 0
+					.located
 						color $grey
-				.work-title
-					padding 15px 0
-					font-size 1rem
-				.work-locate
-					color $darkgrey
-		.bio-bottom
-			position relative
-			lost-column 1/1
-			.bottom-quote
-				visibility hidden
-				position relative
-			.bottom-signature
-				position relative
-				text-align center
-				height 100px
-				margin-top 100px
-				padding 10px 0
-				img
-					height 100%
-					width auto
+					.timing
+						color $grey
+						padding 10px 0
+						// font-size 14px
+					.current
+						color $black
+
 
 

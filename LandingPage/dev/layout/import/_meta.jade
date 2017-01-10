@@ -1,35 +1,35 @@
 - var name = 'Celyn Xie'
-- var title = "Sketch Guides"
-- var description = "Add Guides to edges and midpoints at once."
+- var title = 'Sketch Guides'
+- var description = 'Add Guides to edges and midpoints at once.'
 - var image = 'https://celynxie.com/lib/image/FBavatar.png'
 - var url = 'https://celynxie.com/'
 
 //- Regular
 meta(charset='UTF-8')
-meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-meta(name='viewport', content='width=device-width, initial-scale=1.0')
+meta(http-equiv='x-ua-compatible', content='ie=edge')
+meta(name='viewport', content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
 
 meta(name='author',content=name)
 link(rel='author', href=url)
 meta(name='description', content=description)
-meta(name='keywords', content='Sketch Plugin, UI design, Sketch, Plugin')
 link(rel='canonical', href='MIT')
-//- meta(http-equiv='refresh', content='5;url=http://www.sitepoint.com/')
 
-link(rel="shortcut icon" href="lib/icon/favicon.ico" type="image/x-icon")
-link(rel="icon" href="lib/icon/favicon.ico" type="image/x-icon")
 
+link(rel='shortcut icon' href='lib/icon/favicon.ico' type='image/x-icon')
+link(rel='icon' href='lib/icon/favicon.ico' type='image/x-icon')
+link(rel='manifest', href='manifest.json')
 
 //- Apple decive
-link(rel='apple-touch-icon', sizes='57x57', href='/lib/icon/apple-icon-57x57.png')
-link(rel='apple-touch-icon', sizes='114x114', href='/lib/icon/apple-icon-114x114.png')
-link(rel='apple-touch-icon', sizes='72x72', href='/lib/icon/apple-icon-72x72.png')
-link(rel='apple-touch-icon', sizes='144x144', href='/lib/icon/apple-icon-144x144.png')
-link(rel='apple-touch-icon', sizes='60x60', href='/lib/icon/apple-icon-60x60.png')
-link(rel='apple-touch-icon', sizes='120x120', href='/lib/icon/apple-icon-120x120.png')
-link(rel='apple-touch-icon', sizes='76x76', href='/lib/icon/apple-icon-76x76.png')
-link(rel='apple-touch-icon', sizes='152x152', href='/lib/icon/apple-icon-152x152.png')
+//- link(rel='apple-touch-icon', sizes='57x57', href='/lib/icon/apple-icon-57x57.png')
+//- link(rel='apple-touch-icon', sizes='114x114', href='/lib/icon/apple-icon-114x114.png')
+//- link(rel='apple-touch-icon', sizes='72x72', href='/lib/icon/apple-icon-72x72.png')
+//- link(rel='apple-touch-icon', sizes='144x144', href='/lib/icon/apple-icon-144x144.png')
+//- link(rel='apple-touch-icon', sizes='60x60', href='/lib/icon/apple-icon-60x60.png')
+//- link(rel='apple-touch-icon', sizes='120x120', href='/lib/icon/apple-icon-120x120.png')
+//- link(rel='apple-touch-icon', sizes='76x76', href='/lib/icon/apple-icon-76x76.png')
+//- link(rel='apple-touch-icon', sizes='152x152', href='/lib/icon/apple-icon-152x152.png')
 link(rel='apple-touch-icon', sizes='180x180', href='/lib/icon/apple-icon-180x180.png')
+link(rel='mask-icon', href='safari-pinned-tab.svg', color='#fff')
 
 //- bookmark
 link(rel='icon', type='image/png', href='/lib/icon/android-icon-192x192.png', sizes='192x192')
@@ -38,50 +38,49 @@ link(rel='icon', type='image/png', href='/lib/icon/favicon-96x96.png', sizes='96
 link(rel='icon', type='image/png', href='/lib/icon/favicon-32x32.png', sizes='32x32')
 link(rel='icon', type='image/png', href='/lib/icon/favicon-16x16.png', sizes='16x16')
 link(rel='icon', type='image/png', href='/lib/icon/favicon-128.png', sizes='128x128')
-link(rel="manifest" href="/lib/icon/manifest.json")
 
-
-meta(name="msapplication-TileColor", content="#ffffff")
-meta(name="msapplication-TileImage", content="/lib/icon/ms-icon-144x144.png")
-meta(name="theme-color", content="#ffffff")
-
+meta(name='msapplication-TileColor', content='#ffffff')
+meta(name='msapplication-TileImage', content='/lib/icon/ms-icon-144x144.png')
+meta(name='apple-mobile-web-app-title', content=title)
+nema(name='application-name', content=title)
+meta(name='theme-color', content='#ffffff')
 
 //- //- Twitter
-//- meta(name='twitter:card', content='summary')
-//- meta(name='twitter:url', content=url)
-//- meta(name='twitter:title', content=title)
-//- meta(name='twitter:description', content=description)
-//- meta(name='twitter:image', content=image)
-
-meta(name="twitter:card" content="summary")
-meta(name="twitter:site" content="@celynxie")
-meta(name="twitter:creator" content="@celynixe")
-meta(property="og:url" content="https://celynxie.com")
-meta(property="og:title" content="Sketch Guides")
-meta(property="og:description" content="Add Guides to edges and midpoints at once.")
-meta(property="og:image" content="https://celynxie.com/lib/image/FBavatars.png")
+meta(name='twitter:card', content='summary')
+meta(name='twitter:url', content=url)
+meta(name='twitter:title', content=title)
+meta(name='twitter:description', content=description)
+meta(name='twitter:image', content=image)
+meta(name='twitter:site' content='@celynxie')
+meta(name='twitter:creator' content='@celynixe')
 
 
-//- //- Google
-//- meta(itemprop='name' content=title)
-//- meta(itemprop='description', content=description)
-//- meta(itemprop='image' content=image)
+//- Google
+meta(itemprop='name' content=title)
+meta(itemprop='description', content=description)
+meta(itemprop='image' content='https://celynxie.com/lib/image/FBavatars.png')
+
 
 //- Facebook
-meta(property='og:url' content="https://celynxie.com")
+meta(property='og:url' content=url)
 meta(property='og:type', content='website')
-meta(property='og:title' content='Sketch Guides')
-meta(property='og:description' content='Add Guides to edges and midpoints at once.')
+meta(property='og:title' content=title)
+meta(property='og:description' content=description)
 meta(property='og:image' content='https://celynxie.com/lib/image/FBavatars.png')
+meta(property='og:image:width', content='1200')
+meta(property='og:image:height', content='630')
+meta(property='og:site_name', content=title)
+meta(property='og:locale', content='en_US')
 
 
+//- Source link
 script(src='./lib/script/jquery.js')
 script(src='./lib/script/easing.js')
 script(src='./lib/script/modernizr.js')
 script(src='./lib/script/anims.js')
 script(src='./lib/script/parallax-scroll.js')
 script(src='./lib/script/lazyload.js')
-//- script(src='./lib/script/vide.js')
+
 
 script.
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -93,6 +92,9 @@ script.
 	ga('send', 'pageview');
 
 
-link(rel="stylesheet", href="./lib/css/resize.css")
-link(rel="stylesheet", href="./lib/css/fa/css/fa-min.css")
-link(rel="stylesheet", href="./css/main.css")
+link(rel='stylesheet', href='./lib/css/resize.css')
+link(rel='stylesheet', href='./lib/css/fa/css/fa-min.css')
+link(rel='stylesheet', href='./css/main.css')
+
+
+

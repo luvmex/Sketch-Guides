@@ -2,6 +2,20 @@
 @lost gutter 0px;
 @require '/require/_var.styl'
 
+p
+	display: block
+	font-size 1.2rem
+	font-weight 300
+	line-height 30px
+	max-width 700px
+	margin 0px auto
+	+below(880px)
+		max-width 600px
+		font-size 1rem
+	+below(480px)
+		max-width 100%
+		width 100%
+		line-height 1.5rem
 
 #main
 	animation-fill-mode both
@@ -345,6 +359,8 @@
 				font-weight 200
 				color $black
 		
+
+
 
 // iframe
 // 	html

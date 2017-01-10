@@ -23,7 +23,7 @@ nav
 		&.navScroll
 			background alpha($white, 85%)
 	
-	#name
+	.name
 		position relative
 		display block
 		float left
@@ -68,97 +68,31 @@ nav
 			font-weight 200
 			letter-spacing 1px
 			transition color 0.27s ease-in-out 0s
-
-
-	// .button
-	// 	position relative
-	// 	display block
-	// 	width 50px
-	// 	height 50px
-	// 	float right
-	// 	margin-right 40px
-	// 	margin-top 25px
-	// 	transition margin 0.27s ease-in-out 0s
-	// 	&::before, &::after
-	// 		content 'MENU'
-	// 		position absolute
-	// 		top 20px
-	// 		right 70px
-	// 		font-size 0.9rem
-	// 		font-weight 600
-	// 		letter-spacing 2px
-	// 		color $darkgrey
-	// 		transition all 0.27s ease-in-out 0s
-	// 		opacity 1
-	// 	&::after
-	// 		content 'CLOSE'
-	// 		opacity 0
-		
-	// 	&:hover
-	// 		&::after, &:before
-	// 			letter-spacing 4px
-	// 		.line
-	// 			width 40px
-	// 			&::after, &::before
-	// 				background $black
-	// 	.line
-	// 		position absolute
-	// 		right 15px
-	// 		top 25px
-	// 		width 30px
-	// 		height 1px
-	// 		background black
-	// 		transition all 0.27s ease-in-out 0s
-	// 		&::after, &::before
-	// 			content ''
-	// 			position absolute
-	// 			top 0
-	// 			right 0
-	// 			width 15px
-	// 			height 1px
-	// 			background black
-	// 			transition all 0.27s ease-in-out 0s
-	// 		&::after
-	// 			background $grey
-	// 			top -7px
-	// 		&::before
-	// 			background $darkgrey
-	// 			width 13px
-	// 			top 7px
-
-	// 	&.active
-	// 		&::before
-	// 			opacity 0
-	// 		&::after
-	// 			opacity 1
-	// 		&:hover
-	// 			.line
-	// 				&::after, &::before
-	// 					background $black
-				
-	// 		.line
-	// 			background transparent
-	// 			&::after
-	// 				width 30px
-	// 				transform rotate(45deg)
-	// 				top 0
-	// 			&::before
-	// 				width 30px
-	// 				top 0
-	// 				transform rotate(-45deg)
-		
-	&.navScroll
-		height 60px
-		background alpha($white, 95%)
-		.name
-			.homelink
-				padding 12px 10px
-		.button
-			margin-top 5px
-
-
-
-
+			
+		.backlink
+			position relative
+			display inline-block
+			margin-left 30px
+			top 30px
+			line-height 2rem
+			font-weight 200
+			font-size 1.3rem
+			text-decoration none
+			color $black
+			transition top 0.22s ease-in-out 0s
+			&::after
+				content ' '
+				position: absolute
+				bottom 50%
+				left -120px
+				background $black
+				height 1px
+				width 100px
+				transition left 0.24s ease-in-out 0s
+			&:hover
+				&:after
+					left -130px
+	
 
 
 

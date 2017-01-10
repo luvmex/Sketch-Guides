@@ -5,8 +5,10 @@ $grey = rgba(130,130,130,1)
 $darkgrey = rgba(87,87,87,1)
 $smoggrey = rgba(220,220,220,1)
 $lightgrey = rgba(250,250,250,1)
-$white = rgba(255,255,255,1)
-
+//color platte
+$deepgrey = rgb(50,50,50)
+$whitegrey = rgb(250,250,250)
+$white = rgb(255,255,255)
 // font size
 $120px = 7.5rem
 $20px = 1.3rem
@@ -15,3 +17,98 @@ $40px = 2.5rem
 //color
 $red = rgb(250,0,0)
 $lightred = rgb(253,113,113,1)
+
+
+$link = rgb(100,130,220)
+$good = rgb(100,200,100)
+$error = rgb(255,100,100)
+// font size
+$120px = 7.5rem
+$20px = 1.3rem
+$40px = 2.5rem
+
+
+//Section
+
+vCenter()
+	top 48%
+	transform translateY(-50%)
+	
+wordBreak()
+	word-break break-all
+	word-wrap break-word
+	hyphens auto
+
+//font
+topTitle()
+	display: block
+	font-size 120px
+	line-height 130px
+	font-weight 100
+	letter-spacing 5px
+	color $black
+	font-family 'core-c', sans-serif
+
+topContent()
+	display: block
+	font-size 20px
+	line-height 24px
+	font-weight 200
+	letter-spacing 1px
+	color $darkgrey
+	font-family 'core-c', sans-serif
+
+Title()
+	display: block
+	font-size 36px
+	line-height 40px
+	font-weight 100
+	letter-spacing 1px
+	font-family 'core-c', sans-serif
+
+subTitle()
+	font-size 24px
+	font-weight 300
+	letter-spacing 1px
+	line-height 30px
+	color $black
+
+Content()
+	font-size 16px
+	line-height 20px
+	letter-spacing 1px
+	font-weight 300
+	color $grey
+
+Caption()
+	font-size 15px
+	font-weight 400
+	letter-spacing 1px
+	line-height 20px
+	color $grey
+
+Link()
+	font-size 14px
+	font-weight 400
+	letter-spacing 0px
+	line-height 20px
+	padding 5px 0
+	color $link
+	cursor pointer
+	&:hover
+		text-decoration underline
+
+Button()
+	font-size 15px
+	font-weight 400
+	letter-spacing 0px
+	line-height 30px
+	padding 6px 32px
+	cursor pointer
+	color $white
+	outline 0
+	box-shadow 0
+	background $smoggrey
+	border 0
+	border-radius 40px
+

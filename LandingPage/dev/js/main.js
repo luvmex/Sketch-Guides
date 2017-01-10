@@ -1,11 +1,12 @@
 var CELYN = window.CELYN || {};
 
-
-CELYN.loadFinish = function(){
-	$('.about-title').addClass('aboutTintro');
-	$('.about-describe').addClass('aboutDintro');
+CELYN.fullHeight = function(){
+	var winH = window.innerHeight ? window.innerHeight:$(window).height();
+	var winW = $(window).width();
+	$(".fullHeight").each(function(){
+		$(this).css({'height': winH +'px'});
+	});
 };
-
 
 CELYN.imageLoad = function(){
 	$(function() {
@@ -65,110 +66,64 @@ CELYN.disableHover = function(){
 };
 
 
-CELYN.parallaxElement = function(){    
-    var scroll = $(window).scrollTop();
-    var hoffset = $('header').offset();
-    var hh = $('header').height();
-	var moffset = $('#biography').offset();
-    var Go = (scroll - hoffset.top)/hh;
-	var scrollnext = $('#scrollnext');
-    //head title parallax
- //    if( scroll > hoffset.top ) {
- //      	scrollnext.css({'opacity': 1 - (Go*1.5), 'bottom': 1 - (Go*30)});
-	// 	if (scroll > moffset.top ) {
-	// 		scrollnext.css({'opacity':'0','bottom':'-30px'});
-	// 	}
- //    } else {
-	// 	scrollnext.css({'opacity':'1','bottom':'0px'});
-	// }
 
-	//nav change color
-	var darkBg = $('.darkBg').offset();
-	var darkh = $('.darkBg').height();
-	var DBGH = darkBg.top + darkh
-	var $navLink = $('#name');
-	if( scroll > darkBg.top ) {
-		$navLink.find('.homelink').css({'color':'rgba(220,220,220,1)'});
-		$navLink.find('.myTitle').css({'opacity':'0'});
-		if ( scroll > DBGH ) {
-			$navLink.find('.homelink').css({'color':'rgba(87,87,87,1)'});
-			$navLink.find('.myTitle').css({'opacity':'1'});
+CELYN.scrollDownParallax = function(){
+
+    var scroll = $(window).scrollTop();
+    var headerOffset = $('header').offset();
+	var mainOffset = $('main').offset();
+    var headerHeight = $('header').height();
+    var values = (scroll - headerOffset.top)/headerHeight;
+	var scrolldown = $('#scrolldown');
+
+    //Scroll down
+    if( scroll > headerOffset.top ) {
+      	scrolldown.css({'opacity': 1 - (values*1.5), 'bottom': 30 - (values*60)});
+		if (scroll > mainOffset.top ) {
+			scrolldown.css({'opacity':'0','bottom':'0px'});
 		}
-	} else if(scroll < darkBg.top){
-		$navLink.find('.homelink').css({'color':'rgba(87,87,87,1)'});
-		$navLink.find('.myTitle').css({'opacity':'1'});
+    } else {
+		scrolldown.css({'opacity':'1','bottom':'30px'});
 	}
+
 };
 
 
-
 $(document).ready(function() {
-	CELYN.pageTransition();
+	CELYN.fullHeight();
 
-	// scroll to top
 	$('#scrolltop').click(function(){
 		$('html, body').animate({scrollTop : 0}, 850, 'easeInOutExpo');
-		// $('html, body').animate({scrollTop: $('.wrap_content').first().offset().top}, 850, 'easeInOutExpo');
 		return false;
 	});
 
-	// // Nav scroll
-	// var startScroll;
-	// var lastScrollTop = 0;
-	// var scrollOver = 5;
-	// var navbarHeight = $('nav').outerHeight();
+	CELYN.pageTransition();
+
+	$(window).scroll(function(event) {
+	    CELYN.disableHover();
+	    CELYN.scrollDownParallax();
+
+		var startScroll = true;
+	    var st = $(this).scrollTop();
+	    if(st >= 600){
+	    	$('#scrolltop').css({'bottom':'8%', 'opacity':'1'});
+	    } else {
+	    	$('#scrolltop').css({'bottom':'-50px','opacity':'0'});
+	    }
+	});
 	
-
-	// $(window).scroll(function(event) {  
-
-	// 	var startScroll = true;  
-	// 	//nav scroll
-	// 	setInterval(function() {
-	// 	    if (startScroll) {
-	// 	        hasScrolled();
-	// 	        startScroll = false;
-	// 	    }
-	// 	}, 250);
-	// 	function hasScrolled() {
-	// 	    var st = $(this).scrollTop();
-	// 	    if(st >= 300){
-	// 	    	$('nav').css({'top':'0px'});
-	// 	    } else {
-	// 	    	$('nav').css({'top':'-100px'});
-	// 	    }
-	// 	    lastScrollTop = st;
-	// 	};
-
-	// });
-
-	// CELYN.imageLoad();
 });
 
 
 
 $(window).load(function() {
-	// CELYN.loadFinish();
 	CELYN.smoothScroll();
 });
 
 $(window).resize(function(){
-	// if( Modernizr.mq ('min-width: 880px') ) {
-	// 	CELYN.setPageH();
-	// };
 });
 
-$(window).scroll(function(event) {
-    CELYN.disableHover();
-	CELYN.parallaxElement();
 
-	var startScroll = true;
-	var showup = $('.showupline').offset();
-    var st = $(this).scrollTop();
-    if(st >= showup.top){
-    	$('#scrolltop').css({'bottom':'8%', 'opacity':'1'});
-    } else {
-    	$('#scrolltop').css({'bottom':'-50px','opacity':'0'});
-    }
-});
+
 
       

@@ -9,7 +9,7 @@ html(lang="en")
 		
 		include include/_nav.jade
 
-		#main.page-intro(data-animsition-in-class="fade-in",data-animsition-out-class='fade-out',data-animsition-in-duration='1000')
+		main#main.page-intro(data-animsition-in-class="fade-in",data-animsition-out-class='fade-out',data-animsition-in-duration='1000')
 			header
 				.imgBox
 					img(src="lib/image/sketch.svg", alt="Sketch app icon")
@@ -19,6 +19,7 @@ html(lang="en")
 				.headerDownload
 					a(href='https://github.com/luvmex/Sketch-Guides/archive/master.zip', download='SketchGuides') Download Plugin
 					h6 Available for Sketch 41.^
+
 			section.s1.showupline
 				.shadowBox
 					.tutorial
@@ -53,8 +54,9 @@ html(lang="en")
 						input(type='image', src='https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif', border='0', name='submit', title='PayPal - The safer, easier way to pay online!', alt='Donate', style='outline:none;')
 						img(alt='', border='0', src='https://www.paypal.com/en_US/i/scr/pixel.gif', width='1', height='1')
 
-		include include/_footer.jade
-		include include/_scrolltop.jade
+			#scrolltop
+				.scrolllineup
+			include include/_footer.jade
 
 		script(src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js")
 		script.
