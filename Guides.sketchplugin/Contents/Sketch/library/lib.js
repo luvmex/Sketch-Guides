@@ -13,18 +13,13 @@ var CX = {
         coscript.setShouldKeepAround(true);
         this.doc = context.document;
         this.docData = this.doc.documentData();
-        this.UIMetadata = context.document.mutableUIMetadata();
-        this.window = this.document.window();
-        this.pages = this.document.pages();
         this.page = this.doc.currentPage();
         this.artboard = this.page.currentArtboard();
         this.current = this.artboard || this.page;
-
         if(command && command == "controlbar"){
             this.ControlBar();
             return false;
         }
-
         if(command){
             switch(command){
                 case "top-guide":
