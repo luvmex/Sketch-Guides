@@ -105,10 +105,21 @@ $(document).ready(function() {
 
 		var startScroll = true;
 	    var st = $(this).scrollTop();
+	    var darkBgOffset = $('.darkBg').offset();
+	    var lightBgOffset = $('.lightBg').offset();
+
 	    if(st >= 600){
 	    	$('#scrolltop').css({'bottom':'8%', 'opacity':'1'});
 	    } else {
 	    	$('#scrolltop').css({'bottom':'-50px','opacity':'0'});
+	    }
+	    if( st > (darkBgOffset.top) ){
+	    	$('.name').addClass('darkFont');
+	    	if ( st > (lightBgOffset.top - 150) ) {
+	    		$('.name').removeClass('darkFont');
+		    }
+	    } else {
+	    	$('.name').removeClass('darkFont');
 	    }
 	});
 	

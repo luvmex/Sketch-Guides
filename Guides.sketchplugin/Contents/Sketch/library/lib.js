@@ -2,23 +2,29 @@
 
 var CX = {
     init: function(context, command){
-        this.context = context;
+        this.context = context;        
+        this.SketchVersion = this.context.api()._metadata.appVersion;
         this.extend(context);
         this.pluginRoot = this.scriptPath
                 .stringByDeletingLastPathComponent()
                 .stringByDeletingLastPathComponent()
                 .stringByDeletingLastPathComponent();
         this.pluginSketch = this.pluginRoot + "/Contents/Sketch/library";
+        coscript.setShouldKeepAround(true);
         this.doc = context.document;
         this.docData = this.doc.documentData();
+        this.UIMetadata = context.document.mutableUIMetadata();
+        this.window = this.document.window();
+        this.pages = this.document.pages();
         this.page = this.doc.currentPage();
         this.artboard = this.page.currentArtboard();
         this.current = this.artboard || this.page;
-        coscript.setShouldKeepAround(true);
+
         if(command && command == "controlbar"){
             this.ControlBar();
             return false;
         }
+
         if(command){
             switch(command){
                 case "top-guide":
@@ -76,7 +82,7 @@ CX.extend({
     },
     updateContext: function(){
         this.context.document = NSDocumentController.sharedDocumentController().currentDocument();
-        this.context.selection = this.context.document.selectedLayers();
+        this.context.selection = this.SketchVersion >= "42"? this.context.document.selectedLayers().layers(): this.context.document.selectedLayers();
         return this.context;
     },
 });
