@@ -3,7 +3,7 @@
 # Sketch Guides
 ###Add Guides to edges and midpoints at once.
 
-**Sketch 40.^ support**
+**Sketch 42.^ support**
 
 
 [Landing Page](https://celynxie.com)
@@ -37,4 +37,4 @@ Support intuition interface don't need to use hot-key anymore, that you can just
 ##Contact me
 * Email <celynxie@gmail.com>
 
-Feel free to contact me,for suggestions or any critique.
+Feel free to contact me for any suggestions or critique.
