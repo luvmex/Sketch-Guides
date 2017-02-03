@@ -4,3 +4,4 @@
 /LandingPage/node_modules/*
 /LandingPage/firebase.json
 /LandingPage/database.rules.json
+.gitignore

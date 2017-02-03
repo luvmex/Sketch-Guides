@@ -6,7 +6,10 @@ html(lang="en")
 		script(src='./js/js.js')
 	body
 		//- .animsition-loading
-		
+
+		//- noscript
+			iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NPW7QR2", height="0", width="0", style="display:none;visibility:hidden")
+
 		include include/_nav.jade
 
 		main#main.page-intro(data-animsition-in-class="fade-in",data-animsition-out-class='fade-out',data-animsition-in-duration='1000')
@@ -17,7 +20,7 @@ html(lang="en")
 					h1.brand-title Sketch Guides
 					p.brand-describe A Plugin now with a beautifully easy-to-use interface, simply add accurate guides to edges and midpoints at once, it has never been quicker and easier.
 				.headerDownload
-					a(href='https://github.com/luvmex/Sketch-Guides/archive/master.zip', download='SketchGuides') Download Plugin
+					a(href='https://github.com/luvmex/Sketch-Guides/archive/master.zip', download='SketchGuides', onclick="ga('send', 'event', 'pluginDownloadHeader', 'click', event.target.href );", id='pluginDownload') Download Plugin
 					h6 Available for Sketch 41.^
 
 			section.s1.showupline
@@ -45,7 +48,7 @@ html(lang="en")
 					p.
 						Help you to saved a lot of time in setup the guides without manually. That me show you this remarkable sketch plugin. Just download it and enjoy for design work.
 				.download
-					a(href="https://github.com/luvmex/Sketch-Guides/archive/master.zip", download='SketchGuides') Download for Free
+					a(href="https://github.com/luvmex/Sketch-Guides/archive/master.zip", download='SketchGuides', onclick="ga('send', 'event', 'pluginDownloadContent', 'click', event.target.href );", id='pluginDownload2') Download for Free
 				.donate
 					h6 If you like it, Just buy me a drink.
 					form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')

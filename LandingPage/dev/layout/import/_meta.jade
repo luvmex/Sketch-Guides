@@ -42,7 +42,7 @@ link(rel='icon', type='image/png', href='/lib/icon/favicon-128.png', sizes='128x
 meta(name='msapplication-TileColor', content='#ffffff')
 meta(name='msapplication-TileImage', content='/lib/icon/ms-icon-144x144.png')
 meta(name='apple-mobile-web-app-title', content=title)
-nema(name='application-name', content=title)
+meta(name='application-name', content=title)
 meta(name='theme-color', content='#ffffff')
 
 //- //- Twitter
@@ -90,11 +90,18 @@ script.
 
 	ga('create', 'UA-86006653-1', 'auto');
 	ga('send', 'pageview');
+	//- ga('send', 'event', 'Outbound Link', 'click', event.target.href );
 
 
 link(rel='stylesheet', href='./lib/css/resize.css')
 link(rel='stylesheet', href='./lib/css/fa/css/fa-min.css')
 link(rel='stylesheet', href='./css/main.css')
 
+//- script.
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NPW7QR2');
 
 
