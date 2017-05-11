@@ -1,4 +1,4 @@
-![Demo](https://celynxie.com/lib/image/gitavatar.png)
+![Demo](https://celynxie.com/lib/image/sources/sketchguides/gitavatar.png)
 
 # Sketch Guides
 ###Add Guides to edges and midpoints at once.
@@ -15,7 +15,7 @@ In the past few years I have designed UI with Photoshop plugin named Velositey 1
 Add guide in side, vertical and horizontal direction,
 also can remove all guides.
 
-![Demo](https://celynxie.com/lib/image/screen.png)
+![Demo](https://celynxie.com/lib/image/sources/sketchguides/screen.png)
 
 
 ## Usage
@@ -26,7 +26,7 @@ Just press to lauch Interface Control Tool :
 ## Interface Control tool
 Support intuition interface don't need to use hot-key anymore, that you can just click to use!
 
-![Tool UI](https://celynxie.com/lib/image/ControlTool_UI.png)
+![Tool UI](https://celynxie.com/lib/image/sources/sketchguides/ControlTool_UI.png)
 
 
 ## Installing Plugins

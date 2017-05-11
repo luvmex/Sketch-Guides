@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+	head
+		include import/_meta.jade
+		title Saihu Project
+		script(src='./js/js.js')
+		link(rel="stylesheet", href="./css/404.css")
+	body
+
+		include include/_nav.jade
+
+		#oops.page.page-intro(data-animsition-in-class='fade-in',data-animsition-out-class='fade-out',data-animsition-in-duration='1000').fullHeight
+			main
+				.box
+					h3.title Nothing here.
+					span.content Wherever you're looking for doesn't exist, 
+						| go back 
+						a.back(href='#', onclick='history.go(-1)').animsition-link previous page
+						| , check-out 
+						a.back(href='#').animsition-link sitemap
+						|  or
+						a.back(href='contact.html').animsition-link  contact me 
+						| about this situation.
+
+				.name(style='visibility: hidden;')
+					.darkBg
+					.lightBg

@@ -1,0 +1,59 @@
+html(lang="en")
+	head
+		
+		//- Source link
+		script(src='../lib/script/jquery.js')
+		script(src='../lib/script/easing.js')
+		script(src='../lib/script/modernizr.js')
+		script(src='../lib/script/anims.js')
+		script(src='../lib/script/parallax-scroll.js')
+		script(src='../lib/script/lazyload.js')
+
+
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-86006653-1', 'auto');
+			ga('send', 'pageview');
+			//- ga('send', 'event', 'Outbound Link', 'click', event.target.href );
+
+
+		link(rel='stylesheet', href='../lib/css/resize.css')
+		link(rel='stylesheet', href='../lib/css/fa/css/fa-min.css')
+		link(rel='stylesheet', href='../css/main.css')
+
+		title Sketch Guides
+		//- link(rel="stylesheet", href="../../css/index.css")
+		script(src='./../js/js.js')
+	body
+		//- .animsition-loading
+
+		//- noscript
+			iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-NPW7QR2", height="0", width="0", style="display:none;visibility:hidden")
+
+		include ../include/_nav.jade
+
+		main#main.page-intro(data-animsition-in-class="fade-in",data-animsition-out-class='fade-out',data-animsition-in-duration='1000')
+			header(style="width:1440px; margin:0px auto;")
+				img(src="../lib/image/SaihuProduct.jpg", alt="", style='width:100%;')
+				.darkbg
+				.lightbg
+				.name
+			#scrolltop
+				.scrolllineup
+		include ../include/_footer.jade
+
+		script(src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js")
+		script.
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyCujkVIS1paLrgvUqOn5pP6gMSj3ZzNZcw",
+				authDomain: "sketch-guides.firebaseapp.com",
+				databaseURL: "https://sketch-guides.firebaseio.com",
+				storageBucket: "",
+				messagingSenderId: "913207304785"
+			};
+			firebase.initializeApp(config);
