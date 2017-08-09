@@ -237,6 +237,7 @@ CX.extend({
             this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().top);
             this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().bottom);
         } else {
+            this.checkBaseline();
             this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().top);
             this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().bottom);
         }
@@ -249,6 +250,7 @@ CX.extend({
             this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().right);
             this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().left);
         } else {
+            this.checkBaseline();
             this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().right);
             this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().left);
         }
