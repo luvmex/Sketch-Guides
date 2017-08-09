@@ -1,3 +1,7 @@
+# Sketch Guides 2.0 Update
+### 1.Fix Ruler baseline in Artboard
+### 2.Now available to add Guides without Artboard
+
 ![Demo](https://celynxie.com/lib/image/sources/sketchguides/gitavatar.png)
 
 # Sketch Guides
@@ -6,7 +10,7 @@
 **Sketch 42.^ support**
 
 
-[Landing Page](https://celynxie.com)
+[Landing Page](https://celynxie.com/sources/sketchguides.html)
 
 In the past few years I have designed UI with Photoshop plugin named Velositey 1.0, and it has saved a lot of time to setup the guides in manually. Since I transfered to use Sketch I can't find similar plugin for it. So last week I decided to build my own plugin, and now I presend you my first Sketch Plugin.
 
@@ -37,4 +41,4 @@ Support intuition interface don't need to use hot-key anymore, that you can just
 ## Contact me
 * Email <celynxie@gmail.com>
 
-Feel free to contact me for any suggestions or critique.
+Feel free to contact me for any suggestions.
