@@ -1,7 +1,7 @@
 ![Demo](https://celynxie.com/lib/image/sources/sketchguides/gitavatar.png)
 
 # Sketch Guides
-###Add Guides to edges and midpoints at once.
+### Add Guides to edges and midpoints at once.
 
 **Sketch 42.^ support**
 
@@ -34,7 +34,7 @@ Support intuition interface don't need to use hot-key anymore, that you can just
 2. Double Click `Sketch Guides.sketchplugin` or put in sketch plugin folder.
 
 
-##Contact me
+## Contact me
 * Email <celynxie@gmail.com>
 
 Feel free to contact me for any suggestions or critique.
