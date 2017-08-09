@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.celynxie.com/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Sketch Guides</title>
+		<link>http://sparkle-project.org/files/sparkletestcast.xml</link>
+		<description>A Sketch plugin for Adding Guides to edges and midpoints at once.</description>
+		<language>en</language>
+		<item>
+			<title>Version 2.10</title>
+			<description>
+				<![CDATA[
+				<ul>
+					<li>Added support for plugin updating within Sketch.</li>
+				</ul>
+				]]>
+			</description>
+			<enclosure url="https://github.com/luvmex/Sketch-Guides/archive/2.10.zip" sparkle:version="2.10" />
+		</item>
+	</channel>
+</rss

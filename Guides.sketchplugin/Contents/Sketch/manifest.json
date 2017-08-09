@@ -3,9 +3,12 @@
     "description" : "Add Guides to edges and midpoints at once.",
     "author": "Celyn Xie",
     "authorEmail" : "celynxie@gmail.com",
-    "homepage": "http://celynxie.com",
-    "version": "2.0",
-    "identifier": "com.celyn.guide",
+    "homepage": "https://github.com/luvmex/Sketch-Guides",
+    "version": "2.10",
+    "identifier": "com.celynxie.sketch-guides",
+    "compatibleVersion": "39",
+    "bundleVersion": "2.0",
+    "appcast": "",
     "commands" : [
         {
             "name": "Launch Control Bar",
