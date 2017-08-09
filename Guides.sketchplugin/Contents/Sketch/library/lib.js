@@ -46,6 +46,9 @@ var CX = {
                 case "right-left-guides":
                     this.rightLeftGuides();
                     break;
+                case "triple-guides":
+                    this.tripleGuides();
+                    break;
                 case "remove-all-guides":
                     this.removeAllGuides();
                     break;
@@ -75,6 +78,13 @@ CX.extend({
             maxY: Math.round(rect.y() + rect.height()),
         };
     },
+    getBase: function(layer){
+        var base = layer.rulerBase();
+        return {
+            x: Math.round(base.x.integerValue()),
+            y: Math.round(base.y.integerValue()),
+        }
+    },
     updateContext: function(){
         this.context.document = NSDocumentController.sharedDocumentController().currentDocument();
         this.context.selection = this.SketchVersion >= "42"? this.context.document.selectedLayers().layers(): this.context.document.selectedLayers();
@@ -103,10 +113,9 @@ CX.extend({
 CX.extend({
     selectError: function(){
         var self = this,
-            selection = this.selection,
-            inArtboard = false;
+            selection = this.selection;
 
-        if( selection.count() <= 0 ){
+        if(selection.count() <= 0){
             this.message("Select an element.")
             return false;
         }
@@ -114,78 +123,176 @@ CX.extend({
             this.message("Can't select mutiple element.")
             return false;
         }
-        if(inArtboard || !this.artboard){
-            this.message("Element should be inside Artboard")
-            return false;
-        }
+        // if(inArtboard || !this.artboard){
+        //     this.message("Element should be inside Artboard")
+        //     return false;
+        // }
         return true;
     },
-    setCount: function(gain){
+    checkBaseline: function(){
+        var self = this,
+            artboard = this.artboard,
+            verticalBase = artboard.verticalRulerData(),
+            horizontalBase = artboard.horizontalRulerData();
+
+        if ( verticalBase.base() || horizontalBase.base() !== 0 ) {
+            verticalBase.base = 0;
+            horizontalBase.base = 0;
+        }
+    },
+    setInArtboard: function(gain){
         var self = this,
             selection = this.selection,
             layer = selection.firstObject();
         var targetRect = this.getRect(layer),
             containerRect = this.getRect(this.artboard),
-            eleCount = this.getDistance(targetRect, containerRect);
-        return eleCount;
+            layerBaseCount = this.getDistance(targetRect, containerRect);
+        return layerBaseCount;
+    },
+    setNoArtboard: function(buff){
+        var self = this,
+            selection = this.selection,
+            page = this.page,
+            layer = selection.firstObject();
+        var targetRect = this.getRect(layer),
+            containerRect = this.getBase(page),
+            goSetup = this.getDistance(targetRect, containerRect);
+        return goSetup;
     }
 });
 
 
 CX.extend({
     topGuide: function(){
-        var self = this;
+        var self = this,
+            inArtboard = false;
         if(!this.selectError()) return;
-        this.artboard.verticalRulerData().addGuideWithValue(this.setCount().top);
+        if(inArtboard || !this.artboard){
+            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().top);
+        } else {
+            this.checkBaseline();
+            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().top);
+        }
     },
     rightGuide: function(){
-        var self = this;
+        var self = this,
+            inArtboard = false;
         if(!this.selectError()) return;
-        this.artboard.horizontalRulerData().addGuideWithValue(this.setCount().right);
+        if(inArtboard || !this.artboard){
+            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().right);
+        } else {
+            this.checkBaseline();
+            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().right);
+        }
     },
     bottomGuide: function(){
-        var self = this;
+        var self = this,
+            inArtboard = false;
         if(!this.selectError()) return;
-        this.artboard.verticalRulerData().addGuideWithValue(this.setCount().bottom);
+        if(inArtboard || !this.artboard){
+            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().bottom);
+        } else {
+            this.checkBaseline();
+            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().bottom);
+        }
     },
     leftGuide: function(){
-        var self = this;
+        var self = this,
+            inArtboard = false;
         if(!this.selectError()) return;
-        this.artboard.horizontalRulerData().addGuideWithValue(this.setCount().left);
+        if(inArtboard || !this.artboard){
+            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().left);
+        } else {
+            this.checkBaseline();
+            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().left);
+        }
     },
     vCenterGuide: function(){
-        var self = this;
+        var self = this,
+            inArtboard = false;
         if(!this.selectError()) return;
-        this.artboard.horizontalRulerData().addGuideWithValue(this.setCount().vCenter);
+        if(inArtboard || !this.artboard){
+            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().vCenter);
+        } else {
+            this.checkBaseline();
+            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().vCenter);
+        }
     },
     hCenterGuide: function(){
-        var self = this;
+        var self = this,
+            inArtboard = false;
         if(!this.selectError()) return;
-        this.artboard.verticalRulerData().addGuideWithValue(this.setCount().hCenter);
+        if(inArtboard || !this.artboard){
+            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().hCenter);
+        } else {
+            this.checkBaseline();
+            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().hCenter);
+        }
     },
     topBottomGuides: function(){
-        var self = this;
+        var self = this,
+            inArtboard = false;
         if(!this.selectError()) return;
-        this.artboard.verticalRulerData().addGuideWithValue(this.setCount().top);
-        this.artboard.verticalRulerData().addGuideWithValue(this.setCount().bottom);
+        if(inArtboard || !this.artboard){
+            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().top);
+            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().bottom);
+        } else {
+            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().top);
+            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().bottom);
+        }
     },
     rightLeftGuides: function(){
-        var self = this;
+        var self = this,
+            inArtboard = false;
         if(!this.selectError()) return;
-        this.artboard.horizontalRulerData().addGuideWithValue(this.setCount().right);
-        this.artboard.horizontalRulerData().addGuideWithValue(this.setCount().left);
+        if(inArtboard || !this.artboard){
+            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().right);
+            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().left);
+        } else {
+            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().right);
+            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().left);
+        }
+    },
+    tripleGuides: function(){
+        var self = this,
+            inArtboard = false;
+        if(!this.selectError()) return;
+        if(inArtboard || !this.artboard){
+            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().right);
+            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().vCenter);
+            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().left);
+        } else {
+            this.checkBaseline();
+            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().right);
+            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().vCenter);
+            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().left);
+        }
     },
     removeAllGuides: function(){
-        var self = this;
-        horizontalGuideCount = this.artboard.horizontalRulerData().numberOfGuides();
-        verticalGuideCount = this.artboard.verticalRulerData().numberOfGuides();
-        while (verticalGuideCount > 0) {
-            this.artboard.verticalRulerData().removeGuideAtIndex(0);
-            verticalGuideCount = this.artboard.verticalRulerData().numberOfGuides();
-        }
-        while (horizontalGuideCount > 0) {
-            this.artboard.horizontalRulerData().removeGuideAtIndex(0);
+        var self = this,
+            inArtboard = false;
+        if(inArtboard || !this.artboard){
+            horizontalGuideCount = this.page.horizontalRulerData().numberOfGuides();
+            verticalGuideCount = this.page.verticalRulerData().numberOfGuides();
+            while (verticalGuideCount > 0) {
+                this.page.verticalRulerData().removeGuideAtIndex(0);
+                verticalGuideCount = this.page.verticalRulerData().numberOfGuides();
+            }
+            while (horizontalGuideCount > 0) {
+                this.page.horizontalRulerData().removeGuideAtIndex(0);
+                horizontalGuideCount = this.page.horizontalRulerData().numberOfGuides();
+            }
+        } else {
             horizontalGuideCount = this.artboard.horizontalRulerData().numberOfGuides();
+            verticalGuideCount = this.artboard.verticalRulerData().numberOfGuides();
+            while (verticalGuideCount > 0) {
+                this.artboard.verticalRulerData().removeGuideAtIndex(0);
+                verticalGuideCount = this.artboard.verticalRulerData().numberOfGuides();
+            }
+            while (horizontalGuideCount > 0) {
+                this.artboard.horizontalRulerData().removeGuideAtIndex(0);
+                horizontalGuideCount = this.artboard.horizontalRulerData().numberOfGuides();
+            }
         }
     }
 });
@@ -203,7 +310,7 @@ CX.extend({
             ControlBar.setBackgroundColor(NSColor.colorWithRed_green_blue_alpha(0.99, 0.99, 0.99, 1));
             ControlBar.setTitleVisibility(NSWindowTitleHidden);
             ControlBar.setTitlebarAppearsTransparent(true);
-            ControlBar.setFrame_display(NSMakeRect(0, 0, 640, 50), false);
+            ControlBar.setFrame_display(NSMakeRect(0, 0, 720, 50), false);
             ControlBar.setMovableByWindowBackground(true);
             ControlBar.setHasShadow(true);
             ControlBar.setLevel(NSFloatingWindowLevel);
@@ -245,20 +352,20 @@ CX.extend({
                         self.updateContext();
                         self.init(self.context, "top-guide");
                 }),
-                rightGuideB = addButton( NSMakeRect(150, 10,30,30), "right-guide",
-                    function(sender){
-                        self.updateContext();
-                        self.init(self.context, "right-guide");
-                }),
-                bottomGuideB = addButton( NSMakeRect(200, 10,30,30), "bottom-guide",
+                bottomGuideB = addButton( NSMakeRect(150, 10,30,30), "bottom-guide",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "bottom-guide");
                 }),
-                leftGuideB = addButton( NSMakeRect(250, 10,30,30), "left-guide",
+                leftGuideB = addButton( NSMakeRect(200, 10,30,30), "left-guide",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "left-guide");
+                }),
+                rightGuideB = addButton( NSMakeRect(250, 10,30,30), "right-guide",
+                    function(sender){
+                        self.updateContext();
+                        self.init(self.context, "right-guide");
                 }),
                 vCenterGuideB = addButton( NSMakeRect(330, 10,30,30), "v-center-guide",
                     function(sender){
@@ -280,7 +387,12 @@ CX.extend({
                         self.updateContext();
                         self.init(self.context, "right-left-guides");
                 }),
-                removeAllGuidesB = addButton( NSMakeRect(590, 10,30,30), "remove-all-guides",
+                tripleGuides = addButton ( NSMakeRect(590, 10, 30,30), "triple-guides",
+                    function(sneder){
+                        self.updateContext();
+                        self.init(self.context, "triple-guides");
+                }),
+                removeAllGuidesB = addButton( NSMakeRect(670, 10,30,30), "remove-all-guides",
                     function(sender){
                         self.updateContext();
                         self.init(self.context, "remove-all-guides");
@@ -289,12 +401,13 @@ CX.extend({
                 separate2 = addImage( NSMakeRect(300, 10, 10, 30), "separate"),
                 separate3 = addImage( NSMakeRect(430, 10, 10, 30), "separate"),
                 separate4 = addImage( NSMakeRect(560, 10, 10, 30), "separate");
+                separate5 = addImage( NSMakeRect(640, 10, 10, 30), "separate");
             contentView.addSubview(closeButton);
             contentView.addSubview(separate1);
             contentView.addSubview(topGuideB);
-            contentView.addSubview(rightGuideB);
             contentView.addSubview(bottomGuideB);
             contentView.addSubview(leftGuideB);
+            contentView.addSubview(rightGuideB);
             contentView.addSubview(separate2);
             contentView.addSubview(vCenterGuideB);
             contentView.addSubview(hCenterGuideB);
@@ -302,6 +415,8 @@ CX.extend({
             contentView.addSubview(topBottomGuides);
             contentView.addSubview(rightLeftGuides);
             contentView.addSubview(separate4);
+            contentView.addSubview(tripleGuides);
+            contentView.addSubview(separate5);
             contentView.addSubview(removeAllGuidesB);
             threadDictionary[identifier] = ControlBar;
             ControlBar.center();
