@@ -6,7 +6,7 @@
 		<description>A Sketch plugin for Adding Guides to edges and midpoints at once.</description>
 		<language>en</language>
 		<item>
-			<title>Version 2.12</title>
+			<title>Version 2.13</title>
 			<description>
 				<![CDATA[
 				<ul>
@@ -14,7 +14,7 @@
 				</ul>
 				]]>
 			</description>
-			<enclosure url="https://github.com/luvmex/Sketch-Guides/archive/2.12.zip" sparkle:version="2.12" />
+			<enclosure url="https://github.com/luvmex/Sketch-Guides/archive/2.13.zip" sparkle:version="2.13" />
 		</item>
 	</channel>
 </rss
