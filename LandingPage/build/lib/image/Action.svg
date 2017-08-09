@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="73px" viewBox="0 0 73 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Action</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="14.1975309" y="14.1975309" width="72.2222222" height="72.2222222" rx="36.1111111"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="72.2222222" height="72.2222222" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="LandingPage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Page" transform="translate(-684.000000, -994.000000)">
+            <g id="Video" transform="translate(180.000000, 703.000000)">
+                <g id="box" transform="translate(0.000000, 40.000000)">
+                    <g id="Action" transform="translate(490.000000, 237.000000)">
+                        <rect id="Rectangle-4" x="0" y="0" width="100" height="100"></rect>
+                        <use id="Rectangle-4-Copy" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                        <polygon id="Triangle" fill="#FFFFFF" points="44 64.1604938 44 37 65.6049383 50.5802469"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
