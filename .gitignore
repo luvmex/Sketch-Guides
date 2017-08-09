@@ -1,4 +1,4 @@
--
--.DS_Store
--/LandingPage/
--.gitignore
+
+.DS_Store
+/LandingPage/
+.gitignore
