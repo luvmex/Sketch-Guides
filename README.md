@@ -1,6 +1,7 @@
-# 2.0 Update
-### 1.Fix Ruler baseline in Artboard
-### 2.Now available to add Guides without Artboard
+## 2.0 Update
+### 1.Fix Ruler baseline
+### 2.Available to add Guides without Artboard
+### 3.Support plugin update checking in Sketch.
 
 ![Demo](https://celynxie.com/lib/image/sources/sketchguides/gitavatar.png)
 

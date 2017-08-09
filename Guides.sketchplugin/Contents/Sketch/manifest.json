@@ -4,9 +4,9 @@
     "author": "Celyn Xie",
     "authorEmail" : "celynxie@gmail.com",
     "homepage": "https://github.com/luvmex/Sketch-Guides",
-    "version": "2.20",
+    "version": "2.21",
     "identifier": "com.celynxie.sketch-guides",
-    "compatibleVersion": "39",
+    "compatibleVersion": "42",
     "bundleVersion": "2.0",
     "appcast": "https://raw.githubusercontent.com/luvmex/sketch-guides/master/appcast.xml",
     "commands" : [
