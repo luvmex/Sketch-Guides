@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.celynxie.com/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
 		<title>Sketch Guides</title>
 		<link>http://sparkle-project.org/files/sparkletestcast.xml</link>
 		<description>A Sketch plugin for Adding Guides to edges and midpoints at once.</description>
 		<language>en</language>
 		<item>
-			<title>Version 2.17</title>
+			<title>Version 2.18</title>
 			<description>
 				<![CDATA[
 				<ul>
@@ -14,7 +14,7 @@
 				</ul>
 				]]>
 			</description>
-			<enclosure url="https://github.com/luvmex/Sketch-Guides/archive/2.17.zip" sparkle:version="2.17" />
+			<enclosure url="https://github.com/luvmex/Sketch-Guides/archive/2.18.zip" sparkle:version="2.18" />
 		</item>
 	</channel>
 </rss

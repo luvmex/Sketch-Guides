@@ -1,4 +1,4 @@
-# Sketch Guides 2.0 Update
+# 2.0 Update
 ### 1.Fix Ruler baseline in Artboard
 ### 2.Now available to add Guides without Artboard
 
