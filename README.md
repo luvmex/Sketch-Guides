@@ -1,12 +1,12 @@
-## 2.0 Update
-### 1.Fix Ruler baseline
-### 2.Available to add Guides without Artboard
-### 3.Support plugin update checking in Sketch.
-
 ![Demo](https://celynxie.com/lib/image/sources/sketchguides/gitavatar.png)
 
 # Sketch Guides
 ### Add Guides to edges and midpoints at once.
+
+**Version 2.0 update**
+Fixed Ruler baseline in artboard.
+Available to set Guides without any artboard.
+Support plugin update in Sketch.
 
 **Sketch 42.^ support**
 
