@@ -4,88 +4,99 @@
     "author": "Celyn Xie",
     "authorEmail" : "celynxie@gmail.com",
     "homepage": "https://github.com/luvmex/Sketch-Guides",
-    "version": "2.30",
-    "identifier": "com.celynxie.sketch-guides",
+    "version": "2.4.2",
+    "identifier": "com.celynxie.sketchguides",
     "compatibleVersion": "42",
-    "bundleVersion": "2.0",
+    "bundleVersion": 2,
     "appcast": "https://raw.githubusercontent.com/luvmex/sketch-guides/master/appcast.xml",
     "commands" : [
         {
             "name": "Launch Control Bar",
             "identifier": "controlBar",
             "shortcut": "ctrl shift v",
+            "description":"",
             "handler" : "controlBar",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "Top Guide",
             "identifier": "topGuide",
             "shortcut": "",
+            "description":"",
             "handler" : "topGuide",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "Right Guide",
             "identifier": "rightGuide",
             "shortcut": "",
+            "description":"",
             "handler" : "rightGuide",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "Bottom Guide",
             "identifier": "bottomGuide",
             "shortcut": "",
+            "description":"",
             "handler" : "bottomGuide",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "left Guide",
             "identifier": "leftGuide",
             "shortcut": "",
+            "description":"",
             "handler" : "leftGuide",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "Vertically Center Guide",
             "identifier": "vCenterGuide",
             "shortcut": "",
+            "description":"",
             "handler" : "vCenterGuide",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "Horizontally Center Guide",
             "identifier": "hCenterGuide",
             "shortcut": "",
+            "description":"",
             "handler" : "hCenterGuide",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "TopBottom Guides",
             "identifier": "topBottomGuides",
             "shortcut": "",
+            "description":"",
             "handler" : "topBottomGuides",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "RightLeft Guides",
             "identifier": "rightLeftGuides",
             "shortcut": "",
+            "description":"",
             "handler" : "rightLeftGuides",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "Triple Guides",
             "identifier": "tripleGuides",
             "shortcut": "",
+            "description":"",
             "handler" : "tripleGuides",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         },
         {
             "name": "Remove All Guides",
             "identifier": "removeAllGuides",
             "shortcut": "",
+            "description":"",
             "handler" : "removeAllGuides",
-            "script": "guides.sketchscript"
+            "script": "guides.js"
         }
     ],
     "menu" : {
