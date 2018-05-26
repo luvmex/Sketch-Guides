@@ -117,8 +117,8 @@
             "-",
             "tripleGuides",
             "-",
-            "removeAllGuides",
+            "removeAllGuides"
         ],
         "title" : "Sketch Guides"
-    },
+    }
 }
