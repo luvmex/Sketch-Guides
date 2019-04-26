@@ -4,12 +4,12 @@
     "author": "Celyn Xie",
     "authorEmail" : "celynxie@gmail.com",
     "homepage": "https://github.com/luvmex/Sketch-Guides",
-    "version": "2.4.3",
+    "version": "2.5.1",
     "identifier": "com.celynxie.sketchguides",
     "compatibleVersion": "42",
     "bundleVersion": 2,
-    "appcast": "https://raw.githubusercontent.com/luvmex/sketch-guides/master/appcast.xml",
     "icon": "icon.png",
+    "appcast": "https://raw.githubusercontent.com/luvmex/sketch-guides/master/appcast.xml",
     "commands" : [
         {
             "name": "Launch Control Bar",

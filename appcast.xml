@@ -7,7 +7,7 @@
 		<language>en</language>
 		
 		<item>
-			<title>Version 2.4.3</title>
+			<title>Version 2.5.1</title>
 			<description>
 				<![CDATA[
 				<ul>
@@ -15,21 +15,8 @@
 				</ul>
 				]]>
 			</description>
-			<enclosure url="https://github.com/luvmex/Sketch-Guides/archive/2.4.3.zip" sparkle:version="2.4.3" />
+			<enclosure url="https://github.com/luvmex/Sketch-Guides/archive/2.5.1.zip" sparkle:version="2.5.1" />
 		</item>
-
-		<item>
-			<title>Version 2.4.2</title>
-			<description>
-				<![CDATA[
-				<ul>
-					<li>Little UI Modify</li>
-				</ul>
-				]]>
-			</description>
-			<enclosure url="https://github.com/luvmex/Sketch-Guides/archive/2.4.2.zip" sparkle:version="2.4.2" />
-		</item>
-
 
 	</channel>
 </rss>
