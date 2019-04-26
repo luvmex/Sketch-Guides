@@ -9,6 +9,7 @@
     "compatibleVersion": "42",
     "bundleVersion": 2,
     "appcast": "https://raw.githubusercontent.com/luvmex/sketch-guides/master/appcast.xml",
+    "icon": "icon.png",
     "commands" : [
         {
             "name": "Launch Control Bar",

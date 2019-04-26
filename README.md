@@ -1,6 +1,9 @@
+# Sketch Guides
+
+[![Github All Releases](https://img.shields.io/github/downloads/luvmex/Sketch-Guides/total.svg)]()
+
 ![Demo](https://celynxie.com/lib/image/sources/sketchguides/gitavatar.png)
 
-# Sketch Guides
 ### Add Guides to edges and midpoints at once.
 
 **Version 2.0 update**
