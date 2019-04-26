@@ -1,7 +1,5 @@
 # Sketch Guides
 
-[![Github All Releases](https://img.shields.io/github/downloads/luvmex/Sketch-Guides/total.svg)]()
-
 ![Demo](https://celynxie.com/lib/image/sources/sketchguides/gitavatar.png)
 
 ### Add Guides to edges and midpoints at once.
@@ -40,6 +38,8 @@ Support intuition interface don't need to use hot-key anymore, that you can just
 ## Installing Plugins
 1. [Download](https://github.com/luvmex/Sketch-Guides/archive/master.zip) and unzip
 2. Double Click `Sketch Guides.sketchplugin` or put in sketch plugin folder.
+
+[![Install SketchGuides with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png "Install SketchGuides with Sketchpacks")](https://sketchpacks.com/luvmex/Sketch-Guides/install)
 
 
 ## Contact me
