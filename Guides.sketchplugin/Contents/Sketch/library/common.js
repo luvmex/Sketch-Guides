@@ -119,7 +119,8 @@ SG.extend({
 SG.extend({
     updateContext: function() {
         this.context.document = NSDocumentController.sharedDocumentController().currentDocument();
-        this.context.selection = this.context.document.selectedLayers().layers();
+        // this.context.selection = this.context.document.selectedLayers().layers();
+        this.context.selection = this.context.document.selectedLayers();
         return this.context;
     },
 });

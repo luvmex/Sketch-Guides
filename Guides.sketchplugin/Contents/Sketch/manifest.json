@@ -4,7 +4,7 @@
     "author": "Celyn Xie",
     "authorEmail" : "celynxie@gmail.com",
     "homepage": "https://github.com/luvmex/Sketch-Guides",
-    "version": "2.5.1",
+    "version": "2.5.2",
     "identifier": "com.celynxie.sketchguides",
     "compatibleVersion": "42",
     "bundleVersion": 2,
@@ -118,8 +118,8 @@
             "-",
             "tripleGuides",
             "-",
-            "removeAllGuides",
+            "removeAllGuides"
         ],
         "title" : "Sketch Guides"
-    },
+    }
 }
