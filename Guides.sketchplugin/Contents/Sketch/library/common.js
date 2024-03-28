@@ -81,14 +81,21 @@ SG.extend({
 
 SG.extend({
     getRect: function(layer) {
-        var rect = layer.absoluteRect();
+        var rect = function() {
+            if (layer.isKindOfClass(NSClassFromString("MSPage")) || layer.isKindOfClass(NSClassFromString("MSArtboardGroup"))) {
+                return layer.frame().rect();  
+            }
+            let parent = layer.parentObject();
+            let relativeRect = layer.frame().rect();
+            return parent.convertRect_toCoordinateSpace_(relativeRect, nil);
+        }();
         return {
-            x: Math.round(rect.x()),
-            y: Math.round(rect.y()),
-            width: Math.round(rect.width()),
-            height: Math.round(rect.height()),
-            maxX: Math.round(rect.x() + rect.width()),
-            maxY: Math.round(rect.y() + rect.height()),
+            x: Math.round(rect.origin.x),
+            y: Math.round(rect.origin.y),
+            width: Math.round(rect.size.width),
+            height: Math.round(rect.size.height),
+            maxX: Math.round(rect.origin.x + rect.size.width),
+            maxY: Math.round(rect.origin.y + rect.size.height),
         };
     },
     getBase: function(layer) {
@@ -188,10 +195,10 @@ SG.extend({
             inArtboard = false;
         if (!this.selectError()) return;
         if (inArtboard || !this.artboard) {
-            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().top);
+            this.page.verticalRulerData().addGuideWithGuide(this.setNoArtboard().top);
         } else {
             this.checkBaseline();
-            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().top);
+            this.artboard.verticalRulerData().addGuideWithGuide(this.setInArtboard().top);
         }
     },
     rightGuide: function() {
@@ -199,10 +206,10 @@ SG.extend({
             inArtboard = false;
         if (!this.selectError()) return;
         if (inArtboard || !this.artboard) {
-            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().right);
+            this.page.horizontalRulerData().addGuideWithGuide(this.setNoArtboard().right);
         } else {
             this.checkBaseline();
-            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().right);
+            this.artboard.horizontalRulerData().addGuideWithGuide(this.setInArtboard().right);
         }
     },
     bottomGuide: function() {
@@ -210,10 +217,10 @@ SG.extend({
             inArtboard = false;
         if (!this.selectError()) return;
         if (inArtboard || !this.artboard) {
-            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().bottom);
+            this.page.verticalRulerData().addGuideWithGuide(this.setNoArtboard().bottom);
         } else {
             this.checkBaseline();
-            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().bottom);
+            this.artboard.verticalRulerData().addGuideWithGuide(this.setInArtboard().bottom);
         }
     },
     leftGuide: function() {
@@ -221,10 +228,10 @@ SG.extend({
             inArtboard = false;
         if (!this.selectError()) return;
         if (inArtboard || !this.artboard) {
-            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().left);
+            this.page.horizontalRulerData().addGuideWithGuide(this.setNoArtboard().left);
         } else {
             this.checkBaseline();
-            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().left);
+            this.artboard.horizontalRulerData().addGuideWithGuide(this.setInArtboard().left);
         }
     },
     vCenterGuide: function() {
@@ -232,10 +239,10 @@ SG.extend({
             inArtboard = false;
         if (!this.selectError()) return;
         if (inArtboard || !this.artboard) {
-            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().vCenter);
+            this.page.horizontalRulerData().addGuideWithGuide(this.setNoArtboard().vCenter);
         } else {
             this.checkBaseline();
-            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().vCenter);
+            this.artboard.horizontalRulerData().addGuideWithGuide(this.setInArtboard().vCenter);
         }
     },
     hCenterGuide: function() {
@@ -243,10 +250,10 @@ SG.extend({
             inArtboard = false;
         if (!this.selectError()) return;
         if (inArtboard || !this.artboard) {
-            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().hCenter);
+            this.page.verticalRulerData().addGuideWithGuide(this.setNoArtboard().hCenter);
         } else {
             this.checkBaseline();
-            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().hCenter);
+            this.artboard.verticalRulerData().addGuideWithGuide(this.setInArtboard().hCenter);
         }
     },
     topBottomGuides: function() {
@@ -254,12 +261,12 @@ SG.extend({
             inArtboard = false;
         if (!this.selectError()) return;
         if (inArtboard || !this.artboard) {
-            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().top);
-            this.page.verticalRulerData().addGuideWithValue(this.setNoArtboard().bottom);
+            this.page.verticalRulerData().addGuideWithGuide(this.setNoArtboard().top);
+            this.page.verticalRulerData().addGuideWithGuide(this.setNoArtboard().bottom);
         } else {
             this.checkBaseline();
-            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().top);
-            this.artboard.verticalRulerData().addGuideWithValue(this.setInArtboard().bottom);
+            this.artboard.verticalRulerData().addGuideWithGuide(this.setInArtboard().top);
+            this.artboard.verticalRulerData().addGuideWithGuide(this.setInArtboard().bottom);
         }
     },
     rightLeftGuides: function() {
@@ -267,12 +274,12 @@ SG.extend({
             inArtboard = false;
         if (!this.selectError()) return;
         if (inArtboard || !this.artboard) {
-            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().right);
-            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().left);
+            this.page.horizontalRulerData().addGuideWithGuide(this.setNoArtboard().right);
+            this.page.horizontalRulerData().addGuideWithGuide(this.setNoArtboard().left);
         } else {
             this.checkBaseline();
-            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().right);
-            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().left);
+            this.artboard.horizontalRulerData().addGuideWithGuide(this.setInArtboard().right);
+            this.artboard.horizontalRulerData().addGuideWithGuide(this.setInArtboard().left);
         }
     },
     tripleGuides: function() {
@@ -280,14 +287,14 @@ SG.extend({
             inArtboard = false;
         if (!this.selectError()) return;
         if (inArtboard || !this.artboard) {
-            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().right);
-            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().vCenter);
-            this.page.horizontalRulerData().addGuideWithValue(this.setNoArtboard().left);
+            this.page.horizontalRulerData().addGuideWithGuide(this.setNoArtboard().right);
+            this.page.horizontalRulerData().addGuideWithGuide(this.setNoArtboard().vCenter);
+            this.page.horizontalRulerData().addGuideWithGuide(this.setNoArtboard().left);
         } else {
             this.checkBaseline();
-            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().right);
-            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().vCenter);
-            this.artboard.horizontalRulerData().addGuideWithValue(this.setInArtboard().left);
+            this.artboard.horizontalRulerData().addGuideWithGuide(this.setInArtboard().right);
+            this.artboard.horizontalRulerData().addGuideWithGuide(this.setInArtboard().vCenter);
+            this.artboard.horizontalRulerData().addGuideWithGuide(this.setInArtboard().left);
         }
     },
     removeAllGuides: function() {
@@ -297,22 +304,22 @@ SG.extend({
             horizontalGuideCount = this.page.horizontalRulerData().numberOfGuides();
             verticalGuideCount = this.page.verticalRulerData().numberOfGuides();
             while (verticalGuideCount > 0) {
-                this.page.verticalRulerData().removeGuideAtIndex(0);
+                this.page.verticalRulerData().removeGuideAt(0);
                 verticalGuideCount = this.page.verticalRulerData().numberOfGuides();
             }
             while (horizontalGuideCount > 0) {
-                this.page.horizontalRulerData().removeGuideAtIndex(0);
+                this.page.horizontalRulerData().removeGuideAt(0);
                 horizontalGuideCount = this.page.horizontalRulerData().numberOfGuides();
             }
         } else {
             horizontalGuideCount = this.artboard.horizontalRulerData().numberOfGuides();
             verticalGuideCount = this.artboard.verticalRulerData().numberOfGuides();
             while (verticalGuideCount > 0) {
-                this.artboard.verticalRulerData().removeGuideAtIndex(0);
+                this.artboard.verticalRulerData().removeGuideAt(0);
                 verticalGuideCount = this.artboard.verticalRulerData().numberOfGuides();
             }
             while (horizontalGuideCount > 0) {
-                this.artboard.horizontalRulerData().removeGuideAtIndex(0);
+                this.artboard.horizontalRulerData().removeGuideAt(0);
                 horizontalGuideCount = this.artboard.horizontalRulerData().numberOfGuides();
             }
         }
