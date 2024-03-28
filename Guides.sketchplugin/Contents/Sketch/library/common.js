@@ -81,14 +81,21 @@ SG.extend({
 
 SG.extend({
     getRect: function(layer) {
-        var rect = layer.absoluteRect();
+        var rect = function() {
+            if (layer.isKindOfClass(NSClassFromString("MSPage")) || layer.isKindOfClass(NSClassFromString("MSArtboardGroup"))) {
+                return layer.frame().rect();  
+            }
+            let parent = layer.parentObject();
+            let relativeRect = layer.frame().rect();
+            return parent.convertRect_toCoordinateSpace_(relativeRect, nil);
+        }();
         return {
-            x: Math.round(rect.x()),
-            y: Math.round(rect.y()),
-            width: Math.round(rect.width()),
-            height: Math.round(rect.height()),
-            maxX: Math.round(rect.x() + rect.width()),
-            maxY: Math.round(rect.y() + rect.height()),
+            x: Math.round(rect.origin.x),
+            y: Math.round(rect.origin.y),
+            width: Math.round(rect.size.width),
+            height: Math.round(rect.size.height),
+            maxX: Math.round(rect.origin.x + rect.size.width),
+            maxY: Math.round(rect.origin.y + rect.size.height),
         };
     },
     getBase: function(layer) {
