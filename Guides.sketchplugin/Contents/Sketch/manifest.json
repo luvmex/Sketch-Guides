@@ -44,7 +44,7 @@
             "script": "guides.js"
         },
         {
-            "name": "left Guide",
+            "name": "Left Guide",
             "identifier": "leftGuide",
             "shortcut": "",
             "description":"",
